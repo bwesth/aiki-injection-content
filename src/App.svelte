@@ -27,6 +27,7 @@
     width: 100%;
     background-color: rgba(128, 128, 128, 0.281);
     position: fixed;
+	z-index: 9001;
   }
 
   .aiki-wrapper {
