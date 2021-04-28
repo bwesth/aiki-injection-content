@@ -1,20 +1,26 @@
 <script>
   export let removeInfowarning;
-  let value = 5;
-  let interval = setInterval(() => {
-    value = value > 0 ? value - 1 : () => clearInterval(interval);
-  }, 1000);
+  export let timer;
+  let seconds = Math.round(timer.time / 1000);
+  setInterval(() => {
+    seconds = Math.round(timer.time / 1000);
+  }, 100);
+
+  timer.start();
 </script>
 
 <div class="aiki-overlay">
   <div class="aiki-wrapper">
     <hr />
-    <h1>{value}</h1>
-    <button on:click={removeInfowarning}
-      ><p>Do not show this again</p>
-      <small>(this will turn off the warning step before redirection</small
-      ></button
+    <h1>{seconds}</h1>
+    <button
+      on:click={removeInfowarning}
+      on:mouseover={timer.slow}
+      on:mouseout={timer.hasten}
+      ><p>Snooze</p>
+      <small>(Wait 2 more minutes)</small></button
     >
+
     <hr />
   </div>
 </div>
@@ -27,7 +33,7 @@
     width: 100%;
     background-color: rgba(128, 128, 128, 0.281);
     position: fixed;
-	z-index: 9001;
+    z-index: 9001;
   }
 
   .aiki-wrapper {
