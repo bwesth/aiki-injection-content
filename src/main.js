@@ -46,17 +46,18 @@ const procrastinationWarning = new ProcrastinationWarning({
   props: { removeInfowarning, timer },
 });
 
-//function removeGreeting() {
+let removeGreeting;
+
+export default procrastinationWarning;
+
+// function removeGreeting() {
 //  const element = document.getElementsByClassName("aiki-overlay")[0];
 //  element.remove();
-//}
-
-let removeGreeting;
+// }
 
 // const learningWelcome = new LearningWelcome({
 //   target: document.body,
 //   props: { removeGreeting },
 // });
 
-export default procrastinationWarning;
 // export default learningWelcome;

@@ -1,5 +1,5 @@
 <!-- 
-  Overlay that appears before rerouting from a procrastination site.
+  Overlay that appears during a procrastination session once the earned procrastination time has run out.
  -->
 <script>
   export let removeInfowarning;
@@ -14,14 +14,18 @@
 
 <div class="aiki-overlay">
   <div class="aiki-wrapper">
-    <h1>{seconds}</h1>
+    <h6>Time's up!</h6>
+    <h6>{seconds}</h6>
+    <div clas="button-wrapper">
     <button
       on:click={removeInfowarning}
       on:mouseover={timer.slow}
       on:mouseout={timer.hasten}
-      ><p>Snooze</p>
-      <small>(+2 minutes)</small></button
-    >
+      >
+    </div>
+      <p>Snooze</p>
+      <small>(+1 minute)</small>
+    </button>
   </div>
 </div>
 
@@ -47,17 +51,26 @@
     justify-items: center;
     align-items: center;
     border-radius: 15px;
+    border: 2px solid #AAAAAA;
     box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3);
   }
 
-  h1 {
+  h6 {
+    font-size: 16px;
     color: #212121;
     text-align: center;
     margin: 0;
   }
 
-  p,
+  p {
+    font-size: 14px;
+    text-align: center;
+    margin: 0;
+    color: #FFFFFF;
+  }
+
   small {
+    font-size: 10px;
     text-align: center;
     margin: 0;
     color: #FFFFFF;
@@ -66,8 +79,13 @@
   button {
     width: 90%;
     color: #FFFFFF;
-    background-color: #0069d9;
-    border-color: #0062cc;
+    background-color: #007bff;
+    border-color: #007bff;
     border-radius: 15px;
   }
+
+  button :hover {
+    background-color: #0068d6;
+  }
+
 </style>

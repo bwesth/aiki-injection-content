@@ -63,7 +63,7 @@
     justify-items: center;
     align-items: center;
     border-radius: 15px;
-    box-shadow:  rgba(128, 128, 128, 0.3);
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3);
   }
 
   img {
