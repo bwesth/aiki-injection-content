@@ -16,13 +16,11 @@
   <div class="aiki-wrapper">
     <h6>Time's up!</h6>
     <h6>{seconds}</h6>
-    <div clas="button-wrapper">
     <button
       on:click={removeInfowarning}
       on:mouseover={timer.slow}
       on:mouseout={timer.hasten}
       >
-    </div>
       <p>Snooze</p>
       <small>(+1 minute)</small>
     </button>
