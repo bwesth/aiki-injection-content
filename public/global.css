@@ -1,6 +1,23 @@
 /* Main CSS Document */
-
-/* CSS VARIABLES GO HERE: */
+/* GLOBAL CSS VARIABLES ------------------------- */
+:root {
+	/* UNIVERSAL RULES */
+	/* Fonts */
+	--fontHeaders: "Roboto", sans-serif;
+	--fontContent: "Lato", sans-serif;
+	--fontSize: 14px;
+	/* LIGHT MODE THEME */
+	  /* Colours - Content */
+	--textColor: #444444;
+	--backgroundColor: #FFFFFF;
+	--backgroundColorDark: #282C34;
+	--borderColor: #AAAAAA;
+	--aikiBlue: #3278B4;
+	--shadowColor: rgba(128, 128, 128, 0.3);
+	/* Colours - Misc */
+	--hrColor: #d3d3d3;
+	--footerBackgroundColor: #e8ecf3;
+}
 
 
 html, body {
