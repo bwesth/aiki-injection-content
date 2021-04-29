@@ -1,3 +1,6 @@
+<!-- 
+  Overlay that appears before rerouting from a procrastination site.
+ -->
 <script>
   export let removeInfowarning;
   export let timer;
