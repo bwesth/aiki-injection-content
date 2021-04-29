@@ -43,24 +43,29 @@
     position: fixed;
     top: 40%;
     left: calc(50% - 100px);
-    background-color: var(--backgroundColor);
+    background-color:#FFFFFF;
     justify-items: center;
     align-items: center;
     border-radius: 15px;
-    box-shadow: 2px 2px 2px var(--shadowColor);
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3);
   }
 
-  h1,
+  h1 {
+    color: #212121;
+    text-align: center;
+    margin: 0;
+  }
+
   p,
   small {
     text-align: center;
     margin: 0;
-    color: #fff;
+    color: #FFFFFF;
   }
 
   button {
     width: 90%;
-    color: #fff;
+    color: #FFFFFF;
     background-color: #0069d9;
     border-color: #0062cc;
     border-radius: 15px;

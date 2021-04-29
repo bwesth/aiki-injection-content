@@ -34,8 +34,8 @@
 </script>
 
 {#if render}
-<div on:click={removeGreeting} class="overlay" transition:fade="{{delay: 0, duration: 1000}}">
-  <div class="wrapper">
+<div on:click={removeGreeting} class="aiki-overlay" transition:fade="{{delay: 0, duration: 1000}}">
+  <div class="aiki-wrapper">
     <img src="images/AikiLogo.png" alt="Aiki Logo"/>
     <p>{quote}</p>
   </div>
@@ -43,7 +43,7 @@
 {/if}
 
 <style>
-  .overlay {
+  .aiki-overlay {
     top: 0;
     left: 0;
     height: 100%;
@@ -53,7 +53,7 @@
     z-index: 9001;
   }
 
-  .wrapper {
+  .aiki-wrapper {
     display: flex;
     flex-direction: row;
     width: fit-content;
