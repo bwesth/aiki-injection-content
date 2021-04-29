@@ -63,29 +63,29 @@
     justify-items: center;
     align-items: center;
     border-radius: 15px;
-    box-shadow: 2px 2px 2px var(--shadowColor);
+    box-shadow:  rgba(128, 128, 128, 0.3);
   }
 
   img {
     height: 1.5em;
     padding: 5px;
-    background-color: var(--backgroundColorDark);
+    background-color:  #282C34;
     border-radius: 15px 0px 0px 15px;
-    border: 2px solid var(--backgroundColorDark)
+    border: 2px solid  #282C34;
   }
 
   p {
     height: 24px;
     line-height: 24px;
     padding: 5px;
-    background-color: var(--backgroundColor);
+    background-color: #FFFFFF;
     border-radius: 0px 15px 15px 0px;
     border-left-style: none;
-    border: 2px solid var(--borderColor);
-    font-size: var(--fontSize);
-    font-family: var(--fontContent);
+    border: 2px solid #AAAAAA;
+    font-size: 14px;
+    font-family: "Lato", sans-serif;
     text-align: center;
     margin: 0;
-    color: var(--textColor);
+    color: #444444;
   }
 </style>

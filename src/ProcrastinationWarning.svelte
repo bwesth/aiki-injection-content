@@ -14,17 +14,14 @@
 
 <div class="aiki-overlay">
   <div class="aiki-wrapper">
-    <hr />
     <h1>{seconds}</h1>
     <button
       on:click={removeInfowarning}
       on:mouseover={timer.slow}
       on:mouseout={timer.hasten}
       ><p>Snooze</p>
-      <small>(Wait 2 more minutes)</small></button
+      <small>(+2 minutes)</small></button
     >
-
-    <hr />
   </div>
 </div>
 
@@ -46,16 +43,11 @@
     position: fixed;
     top: 40%;
     left: calc(50% - 100px);
-    background-color: #282c34;
+    background-color: var(--backgroundColor);
     justify-items: center;
     align-items: center;
     border-radius: 15px;
-    box-shadow: 10px 10px 5px grey;
-  }
-
-  hr {
-    width: 90%;
-    color: grey;
+    box-shadow: 2px 2px 2px var(--shadowColor);
   }
 
   h1,
