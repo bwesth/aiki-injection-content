@@ -12,13 +12,13 @@
   timer.start();
 </script>
 
-<div class="aiki-overlay">
-  <div class="aiki-wrapper">
-    <div class="aiki-header-wrapper">
+<div id="aiki-overlay">
+  <div id="aiki-wrapper">
+    <div id="aiki-header-wrapper">
       <img src="images/AikiLogo.png" alt="Aiki Logo"/>
-      <h6>Time's up!</h6>
+      <h1>Time's up!</h1>
     </div>
-    <h5>{seconds}</h5>
+    <h2>{seconds}</h2>
     <button
       on:click={removeInfowarning}
       on:mouseover={timer.slow}
@@ -31,7 +31,7 @@
 </div>
 
 <style>
-  .aiki-overlay {
+  #aiki-overlay {
     top: 0;
     left: 0;
     height: 100%;
@@ -41,10 +41,11 @@
     z-index: 9001;
   }
 
-  .aiki-wrapper {
+  #aiki-wrapper {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 150px;
+    height: 150px;
     position: fixed;
     top: 40%;
     left: calc(50% - 100px);
@@ -56,23 +57,24 @@
     box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3);
   }
 
-  .aiki-header-wrapper {
+  #aiki-header-wrapper {
     display: flex;
     flex-direction: row;
     width: 100%;
     justify-content: center;
     background-color:  #282C34;
-    border-radius: 15px 0px 0px 15px;
+    border-radius: 15px 15px 0px 0px;
     border: 2px solid  #282C34;
+    padding: 3px 0px;
   }
 
   img {
     display: flex;
-    height: 1.5em;
+    height: 1.2em;
     padding: 5px;
   }
 
-  h6 {
+  h1 {
     display: flex;
     font-size: 16px;
     font-family: "Roboto", sans-serif;
@@ -82,7 +84,18 @@
     margin: 0;
   }
 
+  h2 {
+    display: flex;
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    color: #212121;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 0;
+  }
+
   p {
+    font-weight: bold;
     font-size: 14px;
     text-align: center;
     margin: 0;
