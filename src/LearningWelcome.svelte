@@ -1,11 +1,19 @@
 <script>
+  import { fade } from 'svelte/transition';
+
+  export let removeGreeting;
+
+  let render = true;
+  const ref = setTimeout(() => render = false, 1500)
 </script>
 
-<div class="aiki-overlay">
+{#if render}
+<div on:click={removeGreeting} class="aiki-overlay" transition:fade="{{delay: 0, duration: 1000}}">
   <div class="aiki-wrapper">
-    <!-- Need a greeting thing here -->
+    <h1>Lets do something productive! (Insert smiley)</h1>>
   </div>
 </div>
+{/if}
 
 <style>
   .aiki-overlay {

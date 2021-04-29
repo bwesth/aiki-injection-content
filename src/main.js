@@ -1,18 +1,10 @@
 import ProcrastinationWarning from "./ProcrastinationWarning.svelte";
+import LearningWelcome from "./LearningWelcome.svelte";
 
 function removeInfowarning() {
   // will be replaced
 }
 let timer;
-// let timer = {
-//   start: function () {},
-//   stop: function () {},
-//   iterval: undefined,
-//   time: 5000,
-//   slowed: false,
-//   slow: function () {},
-//   hasten: function () {},
-// };
 
 
 // function resolve(arg) {console.log(timer.time)}
@@ -49,9 +41,22 @@ let timer;
 //   },
 // };
 
-const ProcrastinationWarning = new App({
+// const procrastinationWarning = new ProcrastinationWarning({
+//   target: document.body,
+//   props: { removeInfowarning, timer },
+// });
+
+// function removeGreeting() {
+//   const element = document.getElementsByClassName("aiki-overlay")[0];
+//   element.remove();
+// }
+
+let removeGreeting;
+
+const learningWelcome = new LearningWelcome({
   target: document.body,
-  props: { removeInfowarning, timer },
+  props: { removeGreeting },
 });
 
-export default ProcrastinationWarning;
+// export default procrastinationWarning;
+export default learningWelcome;
