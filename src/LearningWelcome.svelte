@@ -34,16 +34,16 @@
 </script>
 
 {#if render}
-<div on:click={removeGreeting} class="aiki-overlay" transition:fade="{{delay: 0, duration: 1000}}">
-  <div class="aiki-wrapper">
-    <img src="images/AikiLogo.png" alt="Aiki Logo"/>
-    <p>{quote}</p>
+<div on:click={removeGreeting} id="aiki-overlay" transition:fade="{{delay: 0, duration: 1000}}">
+  <div id="aiki-wrapper">
+    <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo"/>
+    <p id="aiki-p">{quote}</p>
   </div>
 </div>
 {/if}
 
 <style>
-  .aiki-overlay {
+  #aiki-overlay {
     top: 0;
     left: 0;
     height: 100%;
@@ -53,7 +53,7 @@
     z-index: 9001;
   }
 
-  .aiki-wrapper {
+  #aiki-wrapper {
     display: flex;
     flex-direction: row;
     width: fit-content;
@@ -66,7 +66,7 @@
     box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3);
   }
 
-  img {
+  #aiki-img {
     height: 1.5em;
     padding: 5px;
     background-color:  #282C34;
@@ -74,7 +74,7 @@
     border: 2px solid  #282C34;
   }
 
-  p {
+  #aiki-p {
     height: 24px;
     line-height: 24px;
     padding: 5px;

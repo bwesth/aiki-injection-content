@@ -14,8 +14,11 @@
 
 <div class="aiki-overlay">
   <div class="aiki-wrapper">
-    <h6>Time's up!</h6>
-    <h6>{seconds}</h6>
+    <div class="aiki-header-wrapper">
+      <img src="images/AikiLogo.png" alt="Aiki Logo"/>
+      <h6>Time's up!</h6>
+    </div>
+    <h5>{seconds}</h5>
     <button
       on:click={removeInfowarning}
       on:mouseover={timer.slow}
@@ -48,15 +51,34 @@
     background-color:#FFFFFF;
     justify-items: center;
     align-items: center;
-    border-radius: 15px;
+    border-radius: 0px 0px 15px 15px;
     border: 2px solid #AAAAAA;
     box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3);
   }
 
+  .aiki-header-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    background-color:  #282C34;
+    border-radius: 15px 0px 0px 15px;
+    border: 2px solid  #282C34;
+  }
+
+  img {
+    display: flex;
+    height: 1.5em;
+    padding: 5px;
+  }
+
   h6 {
+    display: flex;
     font-size: 16px;
-    color: #212121;
+    font-family: "Roboto", sans-serif;
+    color: #FFFFFF;
     text-align: center;
+    padding: 5px 0px;
     margin: 0;
   }
 
@@ -79,10 +101,11 @@
     color: #FFFFFF;
     background-color: #007bff;
     border-color: #007bff;
-    border-radius: 15px;
+    border-radius: 5px;
+    transition-duration: 0.4s;
   }
 
-  button :hover {
+  button:hover {
     background-color: #0068d6;
   }
 
