@@ -54,11 +54,9 @@
   }
 
   .wrapper {
-    background-color: var(--backgroundColor);
-    border: 2px solid var(--borderColor);
     display: flex;
     flex-direction: row;
-    width: 250px;
+    width: fit-content;
     position: fixed;
     top: 40%;
     left: calc(50% - 150px);
@@ -71,12 +69,21 @@
   img {
     height: 1.5em;
     padding: 5px;
+    background-color: var(--backgroundColorDark);
+    border-radius: 15px 0px 0px 15px;
+    border: 2px solid var(--backgroundColorDark)
   }
 
   p {
+    height: 24px;
+    line-height: 24px;
+    padding: 5px;
+    background-color: var(--backgroundColor);
+    border-radius: 0px 15px 15px 0px;
+    border-left-style: none;
+    border: 2px solid var(--borderColor);
     font-size: var(--fontSize);
     font-family: var(--fontContent);
-    padding: 10px 0px;
     text-align: center;
     margin: 0;
     color: var(--textColor);
