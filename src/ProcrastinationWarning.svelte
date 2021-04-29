@@ -15,17 +15,18 @@
 <div id="aiki-overlay">
   <div id="aiki-wrapper">
     <div id="aiki-header-wrapper">
-      <img src="images/AikiLogo.png" alt="Aiki Logo"/>
-      <h1>Time's up!</h1>
+      <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo"/>
+      <h1 id="aiki-h1">Time's up!</h1>
     </div>
-    <h2>{seconds}</h2>
+    <h2 id="aiki-h2">{seconds}</h2>
     <button
+      id="aiki-button"
       on:click={removeInfowarning}
       on:mouseover={timer.slow}
       on:mouseout={timer.hasten}
       >
-      <p>Snooze</p>
-      <small>(+1 minute)</small>
+      <p id="aiki-p">Snooze</p>
+      <small id="aiki-small">(+1 minute)</small>
     </button>
   </div>
 </div>
@@ -68,13 +69,13 @@
     padding: 3px 0px;
   }
 
-  img {
+  #aiki-img {
     display: flex;
     height: 1.2em;
     padding: 5px;
   }
 
-  h1 {
+  #aiki-h1 {
     display: flex;
     font-size: 16px;
     font-family: "Roboto", sans-serif;
@@ -84,7 +85,7 @@
     margin: 0;
   }
 
-  h2 {
+  #aiki-h2 {
     display: flex;
     font-size: 20px;
     font-family: "Roboto", sans-serif;
@@ -94,7 +95,7 @@
     margin: 0;
   }
 
-  p {
+  #aiki-p {
     font-weight: bold;
     font-size: 14px;
     text-align: center;
@@ -102,14 +103,14 @@
     color: #FFFFFF;
   }
 
-  small {
+  #aiki-small {
     font-size: 10px;
     text-align: center;
     margin: 0;
     color: #FFFFFF;
   }
 
-  button {
+  #aiki-button {
     width: 90%;
     color: #FFFFFF;
     background-color: #007bff;
@@ -118,7 +119,7 @@
     transition-duration: 0.4s;
   }
 
-  button:hover {
+  #aiki-button:hover {
     background-color: #0068d6;
   }
 
