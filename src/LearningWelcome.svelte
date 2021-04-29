@@ -7,14 +7,33 @@
   export let removeGreeting;
 
   let render = true;
-  const ref = setTimeout(() => render = false, 10000);
+  const ref = setTimeout(() => render = false, 90000);
+
+  const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+
+  function randomQuote() {
+    let index = random(0,6);
+    return quotes[index];
+  }
+
+  const quotes = [
+    "Let's do something productive! 😊",
+    "Time to learn some Python! 🖥️",
+    "Time for another learning session!",
+    "Let's earn some break time! ⏲️",
+    "That's right, it's Python time! 🐍",
+    "Let's get some coding done! 🤖",
+    "Python won't teach itself! 👩‍🏫"
+  ]
+
+  let quote = randomQuote();
 </script>
 
 {#if render}
 <div on:click={removeGreeting} class="aiki-overlay" transition:fade="{{delay: 0, duration: 1000}}">
   <div class="aiki-wrapper">
     <img src="images/AikiLogo.png" alt="Aiki Logo"/>
-    <p>Let's do something productive! 😊</p>
+    <p>{quote}</p>
   </div>
 </div>
 {/if}
@@ -34,11 +53,11 @@
     background-color: var(--backgroundColor);
     border: 2px solid var(--borderColor);
     display: flex;
-    flex-direction: column;
-    width: 200px;
+    flex-direction: row;
+    width: 250px;
     position: fixed;
     top: 40%;
-    left: calc(50% - 100px);
+    left: calc(50% - 150px);
     justify-items: center;
     align-items: center;
     border-radius: 15px;
@@ -46,7 +65,8 @@
   }
 
   img {
-    height: 2em;
+    height: 1.5em;
+    padding: 5px;
   }
 
   p {
