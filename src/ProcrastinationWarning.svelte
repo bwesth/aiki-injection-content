@@ -13,22 +13,29 @@
 </script>
 
 <div id="aiki-overlay">
+  
   <div id="aiki-wrapper">
+
     <div id="aiki-header-wrapper">
       <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo"/>
       <h1 id="aiki-h1">Time's up!</h1>
     </div>
-    <h2 id="aiki-h2">{seconds}</h2>
-    <button
-      id="aiki-button"
-      on:click={removeInfowarning}
-      on:mouseover={timer.slow}
-      on:mouseout={timer.hasten}
-      >
-      <p id="aiki-p">Snooze</p>
-      <small id="aiki-small">(+1 minute)</small>
-    </button>
+
+    <div id="aiki-content-wrapper">
+      <h2 id="aiki-h2">{seconds}</h2>
+      <button
+        id="aiki-button"
+        on:click={removeInfowarning}
+        on:mouseover={timer.slow}
+        on:mouseout={timer.hasten}
+        >
+        <p id="aiki-p">Snooze</p>
+        <small id="aiki-small">(+1 minute)</small>
+      </button>
+    </div>
+
   </div>
+
 </div>
 
 <style>
@@ -39,7 +46,7 @@
     width: 100%;
     background-color: rgba(128, 128, 128, 0.281);
     position: fixed;
-    z-index: 9001;
+    z-index: 9001; /*MEME*/
   }
 
   #aiki-wrapper {
@@ -50,12 +57,22 @@
     position: fixed;
     top: 40%;
     left: calc(50% - 100px);
-    background-color:#FFFFFF;
     justify-items: center;
     align-items: center;
+  }
+
+  #aiki-content-wrapper {
+    border-radius: 0px 0px 15px 15px;
+    background-color:#FFFFFF;
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
     border-radius: 0px 0px 15px 15px;
     border: 2px solid #AAAAAA;
-    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3);
   }
 
   #aiki-header-wrapper {
@@ -76,7 +93,6 @@
   }
 
   #aiki-h1 {
-    display: flex;
     font-size: 16px;
     font-family: "Roboto", sans-serif;
     color: #FFFFFF;
@@ -86,7 +102,6 @@
   }
 
   #aiki-h2 {
-    display: flex;
     font-size: 20px;
     font-family: "Roboto", sans-serif;
     color: #212121;
