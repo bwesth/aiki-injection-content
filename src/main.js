@@ -6,24 +6,25 @@ function removeInfowarning() {
 }
 //let timer;
 
-
-function resolve(arg) {console.log(timer.time)}
+function resolve(arg) {
+  console.log(timer.time);
+}
 let timer = {
   time: 5000,
   interval: undefined,
   slowed: false,
   print: function () {},
   start: function () {
-	  console.log("Starting", timer.time)
+    console.log("Starting", timer.time);
     timer.interval = setInterval(() => {
-		console.log(Math.round(timer.time/1000))
+      console.log(Math.round(timer.time / 1000));
       if (timer.slowed) {
         timer.time -= 20;
       } else {
         timer.time -= 100;
       }
       if (timer.time <= 0) {
-		timer.stop();
+        timer.stop();
         resolve({ msg: "Auto resolve", removeWarning: false });
         // location.href = request.url;
       }
