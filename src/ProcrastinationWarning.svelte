@@ -42,17 +42,17 @@
     width: 100%;
     background-color: rgba(128, 128, 128, 0.281);
     position: fixed;
-    z-index: 9001; /*MEME*/
+    z-index: 9001;
   }
 
   #aiki-wrapper {
     display: flex;
     flex-direction: column;
-    width: 150px;
-    height: 150px;
+    width: 10vw;
+    height: 10vh;
     position: fixed;
     top: 40%;
-    left: calc(50% - 100px);
+    left: 45%;
   }
 
   #aiki-content-wrapper {
@@ -107,7 +107,7 @@
   #aiki-p {
     display: flex;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
     margin: 0;
     color: #ffffff;
@@ -115,7 +115,8 @@
 
   #aiki-small {
     display: flex;
-    font-size: 10px;
+    font-size: 12px;
+    padding-bottom: 5px;
     text-align: center;
     margin: 0;
     color: #ffffff;

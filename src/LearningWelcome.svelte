@@ -7,7 +7,7 @@
   export let removeGreeting;
 
   let render = true;
-  const ref = setTimeout(() => (render = false), 2000);
+  const ref = setTimeout(() => (render = false), 10000);
 
   //Small helper function that improves Math.floor functionality.
   const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
@@ -71,7 +71,7 @@
   }
 
   #aiki-img {
-    height: 1.5em;
+    height: 4vh;
     padding: 5px;
     background-color: #282c34;
     border-radius: 15px 0px 0px 15px;
@@ -79,14 +79,16 @@
   }
 
   #aiki-p {
-    height: 24px;
-    line-height: 24px;
+    height: 4vh;
+    line-height: 4vh;
+    /* height: 24px;
+    line-height: 24px; */
     padding: 5px;
     background-color: #ffffff;
     border-radius: 0px 15px 15px 0px;
     border-left-style: none;
     border: 2px solid #aaaaaa;
-    font-size: 14px;
+    font-size: 16px;
     font-family: "Lato", sans-serif;
     text-align: center;
     margin: 0;
