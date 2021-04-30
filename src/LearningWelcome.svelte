@@ -79,6 +79,8 @@
   }
 
   #aiki-p {
+    display: flex;
+    align-items: center;
     height: 4vh;
     line-height: 4vh;
     /* height: 24px;
