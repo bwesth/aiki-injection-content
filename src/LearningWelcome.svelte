@@ -7,7 +7,7 @@
   export let removeGreeting;
 
   let render = true;
-  const ref = setTimeout(() => (render = false), 10000);
+  const ref = setTimeout(() => (render = false), 2000);
 
   //Small helper function that improves Math.floor functionality.
   const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
@@ -83,8 +83,6 @@
     align-items: center;
     height: 4vh;
     line-height: 4vh;
-    /* height: 24px;
-    line-height: 24px; */
     padding: 5px;
     background-color: #ffffff;
     border-radius: 0px 15px 15px 0px;
