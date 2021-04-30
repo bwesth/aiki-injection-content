@@ -11,36 +11,34 @@
 
   timer.start();
 
-    //Small helper function that improves Math.floor functionality.
-    const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
+  //Small helper function that improves Math.floor functionality.
+  const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-//Picks a random quote for us.
-function randomQuote() {
-  let index = random(0,7);
-  return quotes[index];
-}
+  //Picks a random quote for us.
+  function randomQuote() {
+    let index = random(0, 7);
+    return quotes[index];
+  }
 
-//Some nice little quotes to add to our overlay!
-const quotes = [
-  "Time's up!",
-  "Back to work!",
-  "Time to work!",
-  "ENOUGH",
-  "S̵̝̲̫̓̔́̅̆̿̕Ȩ̷̧̛̥̜̺̳̼̫͇͖̯͎̮̞̋̒̓̿̈́̀̑͒͑̂͛V̵̢͙̜̰͔́̑̔̿͒E̶̝̣̥̗͍̦̳̤̖͎̼͋͌̓̈́̂͜N̶͓͎̤̆́̄̾͋̋̂̀͆͗̓͊̚ ̸̡̢͇̤̖̫͓͕̫̠̺̺̠̤̳̰̐̑̀̂̅̈́͛̈́͋̏͝Ḋ̶̨̜̙̹̟̘͙̲̼̖̰̳̲̻͓̎̌̕͘Á̷͓̳͔͈Y̶̡̧̳̞̜̫̺̐͜S̵̢̫͉̭̮̣̯͙̙̙̖͖̱̬̀͆̒͂͝",
-  "C̶̨̛̬͉̺̤͑͗̓̍͋͂̉̋̒͘H̴̛̺̬̜͚̥͉́̎̂̂͛̎̾̈́̋̏̿̃͗̎͒͊̐͌̃̐͗͐̀͛̌͐̅͌͑̐͂͋̅̕͘͠Ą̴̛̥͙̗̩̘͙͓͙͎̯̹̞̞͙̮̻͚̼͚̻̻͙͇̀͐̋̇͋̊̌̑̃̇͌͊̈́̔͋̈́̈́͌͂̄̔͋̈̓̃͘͜͠Ơ̴̡̢̡̨̢̛̩̖̬͎̯̻̖̳̟̯̫͎͕̹̳͈̪͙̙͉̝͉͔͙̫̯͇̬̩͇̹͂͑͊̀̀͐̎̔̍̇̿̓̈̔̃̑̎́̏͛̀̈́̾̈́͊̃̉̈̇̚̕͘ͅS̸̢̛͇͙̙̦̞̝̜͉̮̩̞̤̺̼̺͍̖͖̫̠̜̹̞̦͎̗͈̗͐͌́̀̑͗͑͊͆̀͆̍́́̂̒̓̀͑̽̾͒͗͂͗̋̚̚͘̚̚͝ͅ",
-  "I HAVE NO EYES"
-];
+  //Some nice little quotes to add to our overlay!
+  const quotes = [
+    "Time's up!",
+    "Back to work!",
+    "Time to work!",
+    "ENOUGH",
+    "S̵̝̲̫̓̔́̅̆̿̕Ȩ̷̧̛̥̜̺̳̼̫͇͖̯͎̮̞̋̒̓̿̈́̀̑͒͑̂͛V̵̢͙̜̰͔́̑̔̿͒E̶̝̣̥̗͍̦̳̤̖͎̼͋͌̓̈́̂͜N̶͓͎̤̆́̄̾͋̋̂̀͆͗̓͊̚ ̸̡̢͇̤̖̫͓͕̫̠̺̺̠̤̳̰̐̑̀̂̅̈́͛̈́͋̏͝Ḋ̶̨̜̙̹̟̘͙̲̼̖̰̳̲̻͓̎̌̕͘Á̷͓̳͔͈Y̶̡̧̳̞̜̫̺̐͜S̵̢̫͉̭̮̣̯͙̙̙̖͖̱̬̀͆̒͂͝",
+    "C̶̨̛̬͉̺̤͑͗̓̍͋͂̉̋̒͘H̴̛̺̬̜͚̥͉́̎̂̂͛̎̾̈́̋̏̿̃͗̎͒͊̐͌̃̐͗͐̀͛̌͐̅͌͑̐͂͋̅̕͘͠Ą̴̛̥͙̗̩̘͙͓͙͎̯̹̞̞͙̮̻͚̼͚̻̻͙͇̀͐̋̇͋̊̌̑̃̇͌͊̈́̔͋̈́̈́͌͂̄̔͋̈̓̃͘͜͠Ơ̴̡̢̡̨̢̛̩̖̬͎̯̻̖̳̟̯̫͎͕̹̳͈̪͙̙͉̝͉͔͙̫̯͇̬̩͇̹͂͑͊̀̀͐̎̔̍̇̿̓̈̔̃̑̎́̏͛̀̈́̾̈́͊̃̉̈̇̚̕͘ͅS̸̢̛͇͙̙̦̞̝̜͉̮̩̞̤̺̼̺͍̖͖̫̠̜̹̞̦͎̗͈̗͐͌́̀̑͗͑͊͆̀͆̍́́̂̒̓̀͑̽̾͒͗͂͗̋̚̚͘̚̚͝ͅ",
+    "I HAVE NO EYES",
+  ];
 
-//Picks a random quote whenever the overlay is loaded.
-let quote = randomQuote();
+  //Picks a random quote whenever the overlay is loaded.
+  let quote = randomQuote();
 </script>
 
 <div id="aiki-overlay">
-  
   <div id="aiki-wrapper">
-
     <div id="aiki-header-wrapper">
-      <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo"/>
+      <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo" />
       <h1 id="aiki-h1">{quote}</h1>
     </div>
 
@@ -51,14 +49,12 @@ let quote = randomQuote();
         on:click={removeInfowarning}
         on:mouseover={timer.slow}
         on:mouseout={timer.hasten}
-        >
+      >
         <p id="aiki-p">Snooze</p>
         <small id="aiki-small">(+1 minute)</small>
       </button>
     </div>
-
   </div>
-
 </div>
 
 <style>
@@ -84,7 +80,7 @@ let quote = randomQuote();
 
   #aiki-content-wrapper {
     border-radius: 0px 0px 15px 15px;
-    background-color:#FFFFFF;
+    background-color: #ffffff;
     box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3);
     width: 100%;
     display: flex;
@@ -93,7 +89,7 @@ let quote = randomQuote();
     align-content: center;
     text-align: center;
     border-radius: 0px 0px 15px 15px;
-    border: 2px solid #AAAAAA;
+    border: 2px solid #aaaaaa;
   }
 
   #aiki-header-wrapper {
@@ -101,9 +97,9 @@ let quote = randomQuote();
     flex-direction: row;
     width: 100%;
     justify-content: center;
-    background-color:  #282C34;
+    background-color: #282c34;
     border-radius: 15px 15px 0px 0px;
-    border: 2px solid  #282C34;
+    border: 2px solid #282c34;
     padding: 3px 0px;
   }
 
@@ -116,7 +112,7 @@ let quote = randomQuote();
   #aiki-h1 {
     font-size: 16px;
     font-family: "Roboto", sans-serif;
-    color: #FFFFFF;
+    color: #ffffff;
     text-align: center;
     padding: 5px 0px;
     margin: 0;
@@ -137,7 +133,7 @@ let quote = randomQuote();
     font-size: 14px;
     text-align: center;
     margin: 0;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   #aiki-small {
@@ -145,7 +141,7 @@ let quote = randomQuote();
     font-size: 10px;
     text-align: center;
     margin: 0;
-    color: #FFFFFF;
+    color: #ffffff;
   }
 
   #aiki-button {
@@ -154,7 +150,7 @@ let quote = randomQuote();
     align-self: center;
     align-items: center;
     width: 90%;
-    color: #FFFFFF;
+    color: #ffffff;
     background-color: #007bff;
     border-color: #007bff;
     border-radius: 5px;

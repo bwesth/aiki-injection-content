@@ -2,19 +2,19 @@
   Overlay that appears on redirection to a learning site.
  -->
 <script>
-  import { fade } from 'svelte/transition';
+  import { fade } from "svelte/transition";
 
   export let removeGreeting;
 
   let render = true;
-  const ref = setTimeout(() => render = false, 2000);
+  const ref = setTimeout(() => (render = false), 2000);
 
   //Small helper function that improves Math.floor functionality.
   const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
   //Picks a random quote for us.
   function randomQuote() {
-    let index = random(0,6);
+    let index = random(0, 6);
     return quotes[index];
   }
 
@@ -26,7 +26,7 @@
     "Let's earn some break time! ⏲️",
     "That's right, it's Python time! 🐍",
     "Let's get some coding done! 🤖",
-    "Python won't teach itself! 👩‍🏫"
+    "Python won't teach itself! 👩‍🏫",
   ];
 
   //Picks a random quote whenever the overlay is loaded.
@@ -34,12 +34,16 @@
 </script>
 
 {#if render}
-<div on:click={removeGreeting} id="aiki-overlay" transition:fade="{{delay: 0, duration: 1000}}">
-  <div id="aiki-wrapper">
-    <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo"/>
-    <p id="aiki-p">{quote}</p>
+  <div
+    on:click={removeGreeting}
+    id="aiki-overlay"
+    transition:fade={{ delay: 0, duration: 1000 }}
+  >
+    <div id="aiki-wrapper">
+      <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo" />
+      <p id="aiki-p">{quote}</p>
+    </div>
   </div>
-</div>
 {/if}
 
 <style>
@@ -69,19 +73,19 @@
   #aiki-img {
     height: 1.5em;
     padding: 5px;
-    background-color:  #282C34;
+    background-color: #282c34;
     border-radius: 15px 0px 0px 15px;
-    border: 2px solid  #282C34;
+    border: 2px solid #282c34;
   }
 
   #aiki-p {
     height: 24px;
     line-height: 24px;
     padding: 5px;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: 0px 15px 15px 0px;
     border-left-style: none;
-    border: 2px solid #AAAAAA;
+    border: 2px solid #aaaaaa;
     font-size: 14px;
     font-family: "Lato", sans-serif;
     text-align: center;
