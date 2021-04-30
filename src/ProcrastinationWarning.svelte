@@ -1,5 +1,5 @@
 <!-- 
-  Overlay that appears before rerouting from a procrastination site.
+  Overlay that appears during a procrastination session once the earned procrastination time has run out.
  -->
 <script>
   export let removeInfowarning;
@@ -12,65 +12,129 @@
   timer.start();
 </script>
 
-<div class="aiki-overlay">
-  <div class="aiki-wrapper">
-    <hr />
-    <h1>{seconds}</h1>
-    <button
-      on:click={removeInfowarning}
-      on:mouseover={timer.slow}
-      on:mouseout={timer.hasten}
-      ><p>Snooze</p>
-      <small>(Wait 2 more minutes)</small></button
-    >
+<div id="aiki-overlay">
+  <div id="aiki-wrapper">
+    <div id="aiki-header-wrapper">
+      <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo" />
+      <h1 id="aiki-h1">Time's up!</h1>
+    </div>
 
-    <hr />
+    <div id="aiki-content-wrapper">
+      <h2 id="aiki-h2">{seconds}</h2>
+      <button
+        id="aiki-button"
+        on:click={removeInfowarning}
+        on:mouseover={timer.slow}
+        on:mouseout={timer.hasten}
+      >
+        <p id="aiki-p">Snooze</p>
+        <small id="aiki-small">(+1 minute)</small>
+      </button>
+    </div>
   </div>
 </div>
 
 <style>
-  .aiki-overlay {
+  #aiki-overlay {
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     background-color: rgba(128, 128, 128, 0.281);
     position: fixed;
-    z-index: 9001;
+    z-index: 9001; /*MEME*/
   }
 
-  .aiki-wrapper {
+  #aiki-wrapper {
     display: flex;
     flex-direction: column;
-    width: 200px;
+    width: 150px;
+    height: 150px;
     position: fixed;
     top: 40%;
     left: calc(50% - 100px);
+  }
+
+  #aiki-content-wrapper {
+    border-radius: 0px 0px 15px 15px;
+    background-color: #ffffff;
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    border-radius: 0px 0px 15px 15px;
+    border: 2px solid #aaaaaa;
+  }
+
+  #aiki-header-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
     background-color: #282c34;
-    justify-items: center;
-    align-items: center;
-    border-radius: 15px;
-    box-shadow: 10px 10px 5px grey;
+    border-radius: 15px 15px 0px 0px;
+    border: 2px solid #282c34;
+    padding: 3px 0px;
   }
 
-  hr {
-    width: 90%;
-    color: grey;
+  #aiki-img {
+    display: flex;
+    height: 1.2em;
+    padding: 5px;
   }
 
-  h1,
-  p,
-  small {
+  #aiki-h1 {
+    font-size: 16px;
+    font-family: "Roboto", sans-serif;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 0px;
+    margin: 0;
+  }
+
+  #aiki-h2 {
+    font-size: 20px;
+    font-family: "Roboto", sans-serif;
+    color: #212121;
+    text-align: center;
+    padding: 10px 0px;
+    margin: 0;
+  }
+
+  #aiki-p {
+    display: flex;
+    font-weight: bold;
+    font-size: 14px;
     text-align: center;
     margin: 0;
-    color: #fff;
+    color: #ffffff;
   }
 
-  button {
+  #aiki-small {
+    display: flex;
+    font-size: 10px;
+    text-align: center;
+    margin: 0;
+    color: #ffffff;
+  }
+
+  #aiki-button {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
     width: 90%;
-    color: #fff;
-    background-color: #0069d9;
-    border-color: #0062cc;
-    border-radius: 15px;
+    color: #ffffff;
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 5px;
+    transition-duration: 0.4s;
+  }
+
+  #aiki-button:hover {
+    background-color: #0068d6;
   }
 </style>
