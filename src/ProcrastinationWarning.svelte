@@ -57,8 +57,6 @@
     position: fixed;
     top: 40%;
     left: calc(50% - 100px);
-    justify-items: center;
-    align-items: center;
   }
 
   #aiki-content-wrapper {
@@ -111,6 +109,7 @@
   }
 
   #aiki-p {
+    display: flex;
     font-weight: bold;
     font-size: 14px;
     text-align: center;
@@ -119,6 +118,7 @@
   }
 
   #aiki-small {
+    display: flex;
     font-size: 10px;
     text-align: center;
     margin: 0;
@@ -126,6 +126,10 @@
   }
 
   #aiki-button {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    align-items: center;
     width: 90%;
     color: #FFFFFF;
     background-color: #007bff;
@@ -137,5 +141,4 @@
   #aiki-button:hover {
     background-color: #0068d6;
   }
-
 </style>
