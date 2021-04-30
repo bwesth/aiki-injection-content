@@ -10,36 +10,13 @@
   }, 100);
 
   timer.start();
-
-  //Small helper function that improves Math.floor functionality.
-  const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
-
-  //Picks a random quote for us.
-  function randomQuote() {
-    let index = random(0, 7);
-    return quotes[index];
-  }
-
-  //Some nice little quotes to add to our overlay!
-  const quotes = [
-    "Time's up!",
-    "Back to work!",
-    "Time to work!",
-    "ENOUGH",
-    "S̵̝̲̫̓̔́̅̆̿̕Ȩ̷̧̛̥̜̺̳̼̫͇͖̯͎̮̞̋̒̓̿̈́̀̑͒͑̂͛V̵̢͙̜̰͔́̑̔̿͒E̶̝̣̥̗͍̦̳̤̖͎̼͋͌̓̈́̂͜N̶͓͎̤̆́̄̾͋̋̂̀͆͗̓͊̚ ̸̡̢͇̤̖̫͓͕̫̠̺̺̠̤̳̰̐̑̀̂̅̈́͛̈́͋̏͝Ḋ̶̨̜̙̹̟̘͙̲̼̖̰̳̲̻͓̎̌̕͘Á̷͓̳͔͈Y̶̡̧̳̞̜̫̺̐͜S̵̢̫͉̭̮̣̯͙̙̙̖͖̱̬̀͆̒͂͝",
-    "C̶̨̛̬͉̺̤͑͗̓̍͋͂̉̋̒͘H̴̛̺̬̜͚̥͉́̎̂̂͛̎̾̈́̋̏̿̃͗̎͒͊̐͌̃̐͗͐̀͛̌͐̅͌͑̐͂͋̅̕͘͠Ą̴̛̥͙̗̩̘͙͓͙͎̯̹̞̞͙̮̻͚̼͚̻̻͙͇̀͐̋̇͋̊̌̑̃̇͌͊̈́̔͋̈́̈́͌͂̄̔͋̈̓̃͘͜͠Ơ̴̡̢̡̨̢̛̩̖̬͎̯̻̖̳̟̯̫͎͕̹̳͈̪͙̙͉̝͉͔͙̫̯͇̬̩͇̹͂͑͊̀̀͐̎̔̍̇̿̓̈̔̃̑̎́̏͛̀̈́̾̈́͊̃̉̈̇̚̕͘ͅS̸̢̛͇͙̙̦̞̝̜͉̮̩̞̤̺̼̺͍̖͖̫̠̜̹̞̦͎̗͈̗͐͌́̀̑͗͑͊͆̀͆̍́́̂̒̓̀͑̽̾͒͗͂͗̋̚̚͘̚̚͝ͅ",
-    "I HAVE NO EYES",
-  ];
-
-  //Picks a random quote whenever the overlay is loaded.
-  let quote = randomQuote();
 </script>
 
 <div id="aiki-overlay">
   <div id="aiki-wrapper">
     <div id="aiki-header-wrapper">
       <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo" />
-      <h1 id="aiki-h1">{quote}</h1>
+      <h1 id="aiki-h1">Time's up!</h1>
     </div>
 
     <div id="aiki-content-wrapper">
