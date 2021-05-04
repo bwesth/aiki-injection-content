@@ -1,11 +1,15 @@
 import ProcrastinationWarning from "./ProcrastinationWarning.svelte";
 import LearningWelcome from "./LearningWelcome.svelte";
+import Chart from "./Charts.svelte"
 
-function removeInfowarning() {
-  // will be replaced
-}
-//let timer;
+const Chart = new Chart({
+  target: document.body,
+  props: {},
+});
 
+export default Chart;
+
+// USELESS CODE FROM OTHER BRANCHES!!!! >:P
 // function resolve(arg) {
 //   console.log(timer.time);
 // }
@@ -51,14 +55,14 @@ function removeInfowarning() {
 
 // export default procrastinationWarning;
 
-function removeGreeting() {
- const element = document.getElementsByClassName("aiki-overlay")[0];
- element.remove();
-}
+// function removeGreeting() {
+//  const element = document.getElementsByClassName("aiki-overlay")[0];
+//  element.remove();
+// }
 
-const learningWelcome = new LearningWelcome({
-  target: document.body,
-  props: { removeGreeting },
-});
+// const learningWelcome = new LearningWelcome({
+//   target: document.body,
+//   props: { removeGreeting },
+// });
 
-export default learningWelcome;
+// export default learningWelcome;
