@@ -7,7 +7,7 @@
   export let removeGreeting;
 
   let render = true;
-  const ref = setTimeout(() => (render = false), 10000);
+  const ref = setTimeout(() => (render = false), 2000);
 
   //Small helper function that improves Math.floor functionality.
   const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
