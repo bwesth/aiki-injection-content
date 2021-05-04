@@ -79,10 +79,10 @@
   }
 
   #aiki-p {
+    display: flex;
+    align-items: center;
     height: 4vh;
     line-height: 4vh;
-    /* height: 24px;
-    line-height: 24px; */
     padding: 5px;
     background-color: #ffffff;
     border-radius: 0px 15px 15px 0px;
