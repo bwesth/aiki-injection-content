@@ -1,13 +1,15 @@
 import ProcrastinationWarning from "./ProcrastinationWarning.svelte";
 import LearningWelcome from "./LearningWelcome.svelte";
-import Chart from "./Charts.svelte"
+import TimeSelector from "./TimeSelector.svelte"
+// import Chart from "./Charts.svelte"
 
-const Chart = new Chart({
-  target: document.body,
-  props: {},
-});
+<TimeSelector/>
+// const Chart = new Chart({
+//   target: document.body,
+//   props: {},
+// });
 
-export default Chart;
+// export default Chart;
 
 // USELESS CODE FROM OTHER BRANCHES!!!! >:P
 // function resolve(arg) {
