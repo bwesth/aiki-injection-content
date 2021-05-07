@@ -1,32 +1,34 @@
 <script>
-  // import Fa from "svelte-fa";
-  // import { faHourglass } from "@fortawesome/free-solid-svg-icons";
+  export let minutesArray;
+  export let secondsArray;
 
-  let minutes;
-  let seconds;
+  console.log("This is the MArray in component",minutesArray);
+  console.log("This is the SArray in component",secondsArray);
 </script>
 
 <select id="inline" class="custom-select custom-select-sm">
-  <option selected>Minutes</option>
-  <option value="1">1</option>
-  <option value="2">2</option>
-  <option value="3">3</option>
-  <option value="4">4</option>
-  <option value="5">5</option>
+  <optgroup label="Minutes">
+    <!-- <option selected disabled>Minutes</option> -->
+    {#each minutesArray as minute}
+    <option value="{minute}">{minute}</option>
+    {/each}
+  </optgroup>
 </select>
 
 <select id="inline" class="custom-select custom-select-sm">
-  <option selected>Seconds</option>
-  <option value="0">00</option>
-  <option value="15">15</option>
-  <option value="30">30</option>
-  <option value="45">45</option>
+  <optgroup label="Seconds">
+    <!-- <option selected disabled>Seconds</option> -->
+    {#each secondsArray as second}
+    <option value="{second}">{second}</option>
+    {/each}
+  </optgroup>
 </select>
 
 <style>
   #inline {
-    display: flex;
+    display: inline !important;
     flex-direction: row;
     width: 40%;
+    margin-bottom: 20px;
   }
 </style>
