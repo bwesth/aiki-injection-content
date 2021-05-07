@@ -1,11 +1,12 @@
 <script>
   import TimeSelector from "./TimeSelector.svelte";
 
-  let minutesArray = [1,2,3,4,5,6];
-  let secondsArray = [0, 15, 45];
+  //Generates an array with values from 1->60
+  let minutesArray = Array.from({ length: 60 }, (_, i) => i + 1);
+  let secondsArray = [0, 15, 30, 45];
 
   console.log("minutesarray", minutesArray);
-  console.log("secondsarray", secondsArray)
+  console.log("secondsarray", secondsArray);
 </script>
 
 <div class="main">
@@ -16,8 +17,8 @@
     </div>
     <div class="col-sm" />
     <div class="col-sm">
-      <TimeSelector {minutesArray} />
-      <TimeSelector {secondsArray} />
+      <TimeSelector {minutesArray} {secondsArray} />
+      <TimeSelector {minutesArray} {secondsArray} />
     </div>
   </div>
 </div>
