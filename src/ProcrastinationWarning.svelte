@@ -36,106 +36,106 @@
 
 <style>
   #aiki-overlay {
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(128, 128, 128, 0.281);
-    position: fixed;
-    z-index: 9001;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    background-color: rgba(128, 128, 128, 0.281) !important;
+    position: fixed !important;
+    z-index: 9001 !important;
   }
 
   #aiki-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 10vw;
-    height: 10vh;
-    position: fixed;
-    top: 40%;
-    left: 45%;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 10vw !important;
+    height: 10vh !important;
+    position: fixed !important;
+    top: 40% !important;
+    left: 45% !important;
   }
 
   #aiki-content-wrapper {
-    border-radius: 0px 0px 15px 15px;
-    background-color: #ffffff;
-    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    border-radius: 0px 0px 15px 15px;
-    border: 2px solid #aaaaaa;
+    border-radius: 0px 0px 15px 15px !important;
+    background-color: #ffffff !important;
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3) !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-content: center !important;
+    text-align: center !important;
+    border-radius: 0px 0px 15px 15px !important;
+    border: 2px solid #aaaaaa !important;
   }
 
   #aiki-header-wrapper {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: center;
-    background-color: #282c34;
-    border-radius: 15px 15px 0px 0px;
-    border: 2px solid #282c34;
-    padding: 3px 0px;
+    display: flex !important;
+    flex-direction: row !important;
+    width: 100% !important;
+    justify-content: center !important;
+    background-color: #282c34 !important;
+    border-radius: 15px 15px 0px 0px !important;
+    border: 2px solid #282c34 !important;
+    padding: 3px 0px !important;
   }
 
   #aiki-img {
-    display: flex;
-    height: 1.2em;
-    padding: 5px;
+    display: flex !important;
+    height: 1.2em !important;
+    padding: 5px !important;
   }
 
   #aiki-h1 {
-    font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    color: #ffffff;
-    text-align: center;
-    padding: 5px 0px;
-    margin: 0;
+    font-size: 16px !important;
+    font-family: "Roboto", sans-serif !important;
+    color: #ffffff !important;
+    text-align: center !important;
+    padding: 5px 0px !important;
+    margin: 0 !important;
   }
 
   #aiki-h2 {
-    font-size: 20px;
-    font-family: "Roboto", sans-serif;
-    color: #212121;
-    text-align: center;
-    padding: 10px 0px;
-    margin: 0;
+    font-size: 20px !important;
+    font-family: "Roboto", sans-serif !important;
+    color: #212121 !important;
+    text-align: center !important;
+    padding: 10px 0px !important;
+    margin: 0 !important;
   }
 
   #aiki-p {
-    display: flex;
-    font-weight: bold;
-    font-size: 16px;
-    text-align: center;
-    margin: 0;
-    color: #ffffff;
+    display: flex !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+    text-align: center !important;
+    margin: 0 !important;
+    color: #ffffff !important;
   }
 
   #aiki-small {
-    display: flex;
-    font-size: 12px;
-    padding-bottom: 5px;
-    text-align: center;
-    margin: 0;
-    color: #ffffff;
+    display: flex !important;
+    font-size: 12px !important;
+    padding-bottom: 5px !important;
+    text-align: center !important;
+    margin: 0 !important;
+    color: #ffffff !important;
   }
 
   #aiki-button {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-items: center;
-    width: 90%;
-    color: #ffffff;
-    background-color: #007bff;
-    border-color: #007bff;
-    border-radius: 5px;
-    transition-duration: 0.4s;
+    display: flex !important;
+    flex-direction: column !important;
+    align-self: center !important;
+    align-items: center !important;
+    width: 90% !important;
+    color: #ffffff !important;
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+    border-radius: 5px !important;
+    transition-duration: 0.4s !important;
   }
 
   #aiki-button:hover {
-    background-color: #0068d6;
+    background-color: #0068d6 !important;
   }
 </style>

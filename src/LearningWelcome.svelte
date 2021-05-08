@@ -48,50 +48,50 @@
 
 <style>
   #aiki-overlay {
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(128, 128, 128, 0.3);
-    position: fixed;
-    z-index: 9001;
+    top: 0 !important;
+    left: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    background-color: rgba(128, 128, 128, 0.3) !important;
+    position: fixed !important;
+    z-index: 9001 !important;
   }
 
   #aiki-wrapper {
-    display: flex;
-    flex-direction: row;
-    width: fit-content;
-    position: fixed;
-    top: 40%;
-    left: calc(50% - 150px);
-    justify-items: center;
-    align-items: center;
-    border-radius: 15px;
-    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3);
+    display: flex !important;
+    flex-direction: row !important;
+    width: fit-content !important;
+    position: fixed !important;
+    top: 40% !important;
+    left: calc(50% - 150px) !important;
+    justify-items: center !important;
+    align-items: center !important;
+    border-radius: 15px !important;
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3) !important;
   }
 
   #aiki-img {
-    height: 4vh;
-    padding: 5px;
-    background-color: #282c34;
-    border-radius: 15px 0px 0px 15px;
-    border: 2px solid #282c34;
+    height: 4vh !important;
+    padding: 5px !important;
+    background-color: #282c34 !important;
+    border-radius: 15px 0px 0px 15px !important;
+    border: 2px solid #282c34 !important;
   }
 
   #aiki-p {
-    display: flex;
-    align-items: center;
-    height: 4vh;
-    line-height: 4vh;
-    padding: 5px;
-    background-color: #ffffff;
-    border-radius: 0px 15px 15px 0px;
-    border-left-style: none;
-    border: 2px solid #aaaaaa;
-    font-size: 16px;
-    font-family: "Lato", sans-serif;
-    text-align: center;
-    margin: 0;
-    color: #444444;
+    display: flex !important;
+    align-items: center !important;
+    height: 4vh !important;
+    line-height: 4vh !important;
+    padding: 5px !important;
+    background-color: #ffffff !important;
+    border-radius: 0px 15px 15px 0px !important;
+    border-left-style: none !important;
+    border: 2px solid #aaaaaa !important;
+    font-size: 16px !important;
+    font-family: "Lato", sans-serif !important;
+    text-align: center !important;
+    margin: 0 !important;
+    color: #444444 !important;
   }
 </style>

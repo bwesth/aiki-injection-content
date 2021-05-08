@@ -31,122 +31,122 @@
 
 <style>
   #aiki-overlay {
-    border-radius: 10px;
-    flex-direction: column;
-    top: 1em;
-    right: 1em;
-    height: 8vh;
-    width: 16vh;
-    background-color: #282c34;
-    position: fixed;
-    z-index: 9001;
-    display: flex;
-    align-items: flex-end;
-    padding-top: 3px;
-    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3);
-    border: 1px solid #6c757d;
+    border-radius: 10px !important;
+    flex-direction: column !important;
+    top: 1em !important;
+    right: 1em !important;
+    height: 8vh !important;
+    width: 16vh !important;
+    background-color: #282c34 !important;
+    position: fixed !important;
+    z-index: 9001 !important;
+    display: flex !important;
+    align-items: flex-end !important;
+    padding-top: 3px !important;
+    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3) !important;
+    border: 1px solid #6c757d !important;
   }
 
   #aiki-h5 {
-    color: #ffffff;
-    font-size: 16px;
-    font-family: "Roboto", sans-serif;
-    margin: 0 auto;
+    color: #ffffff !important;
+    font-size: 16px !important;
+    font-family: "Roboto", sans-serif !important;
+    margin: 0 auto !important;
   }
 
   #aiki-button {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    border-radius: 0 0 9px 9px;
-    display: flex;
-    justify-content: center;
-    z-index: 9001;
-    background-color: #28a745;
-    border-color: #28a745;
-    border: 1px solid transparent;
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border-radius: 0 0 9px 9px !important;
+    display: flex !important;
+    justify-content: center !important;
+    z-index: 9001 !important;
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    border: 1px solid transparent !important;
   }
 
   #aiki-button:hover {
-    background-color: #208934;
-    border-color: #208934;
+    background-color: #208934 !important;
+    border-color: #208934 !important;
   }
 
   #aiki-button:disabled {
-    background-color: #6c757d;
-    border-color: #6c757d;
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
   }
 
   #aiki-button:disabled:hover {
-    background-color: #6c757d;
-    border-color: #6c757d;
+    background-color: #6c757d !important;
+    border-color: #6c757d !important;
   }
 
   #aiki-header {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
+    display: flex !important;
+    width: 100% !important;
+    justify-content: space-between !important;
   }
 
   #aiki-img {
-    margin-left: 3px;
-    width: 16px;
-    height: 16px;
-    background-color: #282c34;
-    border-radius: 5px;
-    border: 2px solid #282c34;
+    margin-left: 3px !important;
+    width: 16px !important;
+    height: 16px !important;
+    background-color: #282c34 !important; 
+    border-radius: 5px !important;
+    border: 2px solid #282c34 !important;
   }
 
   #aiki-p {
-    display: flex;
-    align-items: center;
-    height: 4vh;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    text-align: center;
-    margin: 0;
-    color: #ffffff;
-    font-weight: 400;
+    display: flex !important;
+    align-items: center !important;
+    height: 4vh !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    text-align: center !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+    font-weight: 400 !important;
   }
 
   /* Rules for the close button */
   #aiki-close-container {
-    width: 20px;
-    height: 20px;
-    position: relative;
-    cursor: pointer;
-    z-index: 9999;
-    margin-right: 3px;
+    width: 20px !important;
+    height: 20px !important;
+    position: relative !important;
+    cursor: pointer !important;
+    z-index: 9999 !important;
+    margin-right: 3px !important;
   }
 
   #aiki-leftright {
-    margin-top: 8px;
-    height: 4px;
-    width: 16px;
-    position: absolute;
-    background-color: grey;
-    border-radius: 2px;
-    transform: rotate(45deg);
-    transition: all 0.3s ease-in;
+    margin-top: 8px !important;
+    height: 4px !important;
+    width: 16px !important;
+    position: absolute !important;
+    background-color: grey !important;
+    border-radius: 2px !important;
+    transform: rotate(45deg) !important;
+    transition: all 0.3s ease-in !important;
   }
 
   #aiki-rightleft {
-    margin-top: 8px;
-    height: 4px;
-    width: 16px;
-    position: absolute;
-    background-color: grey;
-    border-radius: 2px;
-    transform: rotate(-45deg);
-    transition: all 0.3s ease-in;
+    margin-top: 8px !important;
+    height: 4px !important;
+    width: 16px !important;
+    position: absolute !important;
+    background-color: grey !important;
+    border-radius: 2px !important;
+    transform: rotate(-45deg) !important;
+    transition: all 0.3s ease-in !important;
   }
 
   #aiki-close-container:hover #aiki-leftright {
-    transform: rotate(-45deg);
-    background-color: #dc3545;
+    transform: rotate(-45deg) !important;
+    background-color: #dc3545 !important;
   }
   #aiki-close-container:hover #aiki-rightleft {
-    transform: rotate(45deg);
-    background-color: #dc3545;
+    transform: rotate(45deg) !important;
+    background-color: #dc3545 !important;
   }
 </style>
