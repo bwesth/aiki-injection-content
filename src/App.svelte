@@ -4,10 +4,10 @@
   //Generates an array with values from 1->60
   let minutesArray = Array.from({ length: 60 }, (_, i) => i + 1);
   let secondsArray = [0, 15, 30, 45];
-    let label = "Min/Sec"
+  let label = "Min/Sec";
 
-  console.log("minutesarray", minutesArray);
-  console.log("secondsarray", secondsArray);
+//   console.log("minutesarray", minutesArray);
+//   console.log("secondsarray", secondsArray);
 </script>
 
 <div class="main">
@@ -17,22 +17,22 @@
     </div>
     <div class="col-sm" />
     <div class="col-sm">
-      <TimeSelector {minutesArray} {secondsArray} {label}/>
+      <TimeSelector {minutesArray} {secondsArray} {label} />
     </div>
   </div>
 </div>
 
 <div class="main">
-    <div class="row bottom-row">
-      <div class="col-sm">
-        <p>Time you get on your procrastination sites in exchange:</p>
-      </div>
-      <div class="col-sm" />
-      <div class="col-sm">
-        <TimeSelector {minutesArray} {secondsArray} {label}/>
-      </div>
+  <div class="row bottom-row">
+    <div class="col-sm">
+      <p>Time you get on your procrastination sites in exchange:</p>
+    </div>
+    <div class="col-sm" />
+    <div class="col-sm">
+      <TimeSelector {minutesArray} {secondsArray} {label} />
     </div>
   </div>
+</div>
 
 <style>
   .main {
