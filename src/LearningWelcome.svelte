@@ -4,7 +4,7 @@
 <script>
   import { fade } from "svelte/transition";
 
-  export let removeGreeting;
+  export let welcomeVisible;
 
   let render = true;
   const ref = setTimeout(() => (render = false), 2000);
@@ -35,9 +35,9 @@
 
 {#if render}
   <div
-    on:click={removeGreeting}
+    on:click={() => welcomeVisible = false}
     id="aiki-overlay"
-    transition:fade={{ delay: 0, duration: 1000 }}
+    transition:fade={{ delay: 0, duration: 200 }}
   >
     <div id="aiki-wrapper">
       <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo" />

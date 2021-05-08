@@ -1,10 +1,10 @@
-import ProcrastinationWarning from "./ProcrastinationWarning.svelte";
-// import LearningWelcome from "./LearningWelcome.svelte";
+// import ProcrastinationWarning from "./ProcrastinationWarning.svelte";
+import LearningContent from "./LearningContent.svelte";
 
-function removeInfowarning() {
-  // will be replaced
-}
-let timer;
+// function removeInfowarning() {
+//   // will be replaced
+// }
+// let timer;
 
 // function resolve(arg) {
 //   console.log(timer.time);
@@ -42,23 +42,40 @@ let timer;
 //   },
 // };
 
-const procrastinationWarning = new ProcrastinationWarning({
-  target: document.body,
-  props: { removeInfowarning, timer },
-});
+// const procrastinationWarning = new ProcrastinationWarning({
+//   target: document.body,
+//   props: { removeInfowarning, timer },
+// });
 
 // let removeGreeting;
+// let removeContinueButton;
 
 // export default procrastinationWarning;
+
+// function removeContinueButton() {
+//   const element = document.getElementById("continue-button");
+//   element.remove()
+// }
 
 // function removeGreeting() {
 //  const element = document.getElementsByClassName("aiki-overlay")[0];
 //  element.remove();
 // }
 
-// const learningWelcome = new LearningWelcome({
-//   target: document.body,
-//   props: { removeGreeting },
-// });
+function gotoOrigin(){
+  // console.log("gotoOrigin")
+}
+function endInjection(){
+  console.log("endInjection")
+}
 
-// export default learningWelcome;
+let countdown = 3000
+let welcomeVisible = true
+
+
+const learningContent = new LearningContent({
+  target: document.body,
+  props: { countdown, welcomeVisible, gotoOrigin, endInjection },
+});
+
+export default learningContent;
