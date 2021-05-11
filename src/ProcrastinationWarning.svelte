@@ -129,7 +129,7 @@
     align-self: center !important;
     align-items: center !important;
     width: 90% !important;
-    color: #9c7c7c !important;
+    color: #ffffff !important;
     background-color: #007bff !important;
     border-color: #007bff !important;
     border-radius: 5px !important;

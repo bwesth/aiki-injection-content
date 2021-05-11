@@ -28,21 +28,21 @@
 
 <style>
   .wrapper {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 
   .inline {
     display: inline !important;
-    width: 25%;
-    margin: 0px 5px 20px 0px;
+    width: 25% !important;
+    margin: 0px 5px 20px 0px !important;
   }
 
   p {
-    display: inline;
-    padding: 0;
-    margin: 0px 5px 20px 0px;
+    display: inline !important;
+    padding: 0 !important;
+    margin: 0px 5px 20px 0px !important;
   }
 </style>
