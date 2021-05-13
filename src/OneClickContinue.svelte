@@ -3,7 +3,14 @@
 -->
 <script>
   import { fade } from "svelte/transition";
-
+  import Moveable from "svelte-moveable";
+  import { onMount } from "svelte";
+  let target;
+  let frame = {
+    translate: [0, 0],
+    rotate: 0,
+    transformOrigin: "50% 50%",
+  };
   export let gotoOrigin;
   export let continueVisible;
   export let canContinue;
@@ -13,9 +20,16 @@
     continueVisible = false;
     endInjection();
   }
+  onMount(() => {
+    document.querySelector(".moveable-control-box").style.visibility = "hidden";
+  });
 </script>
 
-<div id="aiki-overlay" transition:fade={{ delay: 0, duration: 200 }}>
+<div
+  bind:this={target}
+  class="aiki-overlay"
+  transition:fade={{ delay: 0, duration: 200 }}
+>
   <div id="aiki-header">
     <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo" />
     <h5 id="aiki-h5">Aiki<sup>3</sup></h5>
@@ -24,24 +38,46 @@
       <div id="aiki-rightleft" />
     </div>
   </div>
-  <button id="aiki-button" disabled={!canContinue} on:click={gotoOrigin}
-    ><p id="aiki-p">Continue</p></button
-  >
+  <button id="aiki-button" disabled={!canContinue} on:click={gotoOrigin}>
+    <p>Continue</p>
+    <p><code>{canContinue ? "Ready" : "Wait"}</code></p>
+  </button>
 </div>
+<Moveable
+  {target}
+  className="moveable"
+  draggable={true}
+  throttleDrag={0}
+  zoom={1}
+  origin={true}
+  on:dragStart={({ detail: e }) => {
+    e.set(frame.translate);
+  }}
+  on:drag={({ detail: e }) => {
+    frame.translate = e.beforeTranslate;
+  }}
+  on:render={({ detail: e }) => {
+    const { translate, rotate, transformOrigin } = frame;
+    e.target.style.transformOrigin = transformOrigin;
+    e.target.style.transform =
+      `translate(${translate[0]}px, ${translate[1]}px)` +
+      ` rotate(${rotate}deg)`;
+  }}
+/>
 
 <style>
-  #aiki-overlay {
+  .aiki-overlay {
     border-radius: 10px !important;
     flex-direction: column !important;
     top: 1em !important;
     right: 1em !important;
-    height: 8vh !important;
-    width: 16vh !important;
+    height: 80px !important;
+    width: 120px !important;
     background-color: #282c34 !important;
     position: fixed !important;
     z-index: 9001 !important;
     display: flex !important;
-    align-items: flex-end !important;
+    align-items: center !important;
     padding-top: 3px !important;
     box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3) !important;
     border: 1px solid #6c757d !important;
@@ -52,20 +88,28 @@
     font-size: 16px !important;
     font-family: "Roboto", sans-serif !important;
     margin: 0 auto !important;
+    cursor: move !important;
   }
 
   #aiki-button {
-    width: 100% !important;
-    height: 100% !important;
+    width: 95% !important;
+    /* height: 90% !important; */
     margin: 0 !important;
     padding: 0 !important;
     border-radius: 0 0 9px 9px !important;
     display: flex !important;
+    flex-direction: column !important;
     justify-content: center !important;
+    align-items: center !important;
     z-index: 9001 !important;
     background-color: #28a745 !important;
     border-color: #28a745 !important;
-    border: 1px solid transparent !important;
+    border: 2px solid  !important;
+  }
+
+  code {
+    color: #ffffff !important;
+    margin: 0 !important;
   }
 
   #aiki-button:hover {
@@ -84,24 +128,26 @@
   }
 
   #aiki-header {
+    height: 25px;
     display: flex !important;
     width: 100% !important;
     justify-content: space-between !important;
+    align-items: center !important;
   }
 
   #aiki-img {
     margin-left: 3px !important;
     width: 16px !important;
     height: 16px !important;
-    background-color: #282c34 !important; 
+    background-color: #282c34 !important;
     border-radius: 5px !important;
     border: 2px solid #282c34 !important;
   }
 
-  #aiki-p {
+  p {
     display: flex !important;
     align-items: center !important;
-    height: 4vh !important;
+    /* height: 4vh !important; */
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     text-align: center !important;
     margin: 0 !important;
