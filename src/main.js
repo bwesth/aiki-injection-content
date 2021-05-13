@@ -1,10 +1,10 @@
-import ProcrastinationWarning from "./ProcrastinationWarning.svelte";
-// import LearningContent from "./LearningContent.svelte";
+// import ProcrastinationWarning from "./ProcrastinationWarning.svelte";
+import LearningContent from "./LearningContent.svelte";
 
-function removeInfowarning() {
-  // will be replaced
-}
-let timer;
+// function removeInfowarning() {
+//   // will be replaced
+// }
+// let timer;
 
 // function resolve(arg) {
 //   console.log(timer.time);
@@ -41,14 +41,14 @@ let timer;
 //     timer.slowed = false;
 //   },
 // };
+// let url
+// let resolve
+// const procrastinationWarning = new ProcrastinationWarning({
+//   target: document.body,
+//   props: { removeInfowarning, timer, resolve, url },
+// });
 
-let resolve
-const procrastinationWarning = new ProcrastinationWarning({
-  target: document.body,
-  props: { removeInfowarning, timer, resolve },
-});
-
-export default procrastinationWarning;
+// export default procrastinationWarning;
 
 
 // let removeGreeting;
@@ -63,20 +63,20 @@ export default procrastinationWarning;
 //  element.remove();
 // }
 
-// function gotoOrigin(){
-//   // console.log("gotoOrigin")
-// }
-// function endInjection(){
-//   console.log("endInjection")
-// }
+function gotoOrigin(){
+  // console.log("gotoOrigin")
+}
+function endInjection(){
+  console.log("endInjection")
+}
 
-// let countdown = 3000
-// let welcomeVisible = true
+let countdown = 3000
+let welcomeVisible = true
 
 
-// const learningContent = new LearningContent({
-//   target: document.body,
-//   props: { countdown, welcomeVisible, gotoOrigin, endInjection },
-// });
+const learningContent = new LearningContent({
+  target: document.body,
+  props: { countdown, welcomeVisible, gotoOrigin, endInjection },
+});
 
-// export default learningContent;
+export default learningContent;

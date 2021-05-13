@@ -5,12 +5,13 @@
   export let resolve;
   export let removeInfowarning;
   export let timer;
+  export let url;
   let seconds = Math.round(timer.time / 1000);
   setInterval(() => {
     seconds = Math.round(timer.time / 1000);
   }, 100);
 
-  timer.start(resolve);
+  timer.start(resolve, url);
 </script>
 
 <div id="aiki-overlay">
