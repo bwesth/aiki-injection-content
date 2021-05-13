@@ -38,7 +38,7 @@
       <div id="aiki-rightleft" />
     </div>
   </div>
-  <button id="aiki-button" disabled={!canContinue} on:click={gotoOrigin}>
+  <button id="aiki-button" disabled={!canContinue} on:click={() => gotoOrigin("injected")}>
     <p>Continue</p>
     <p><code>{canContinue ? "Ready" : "Wait"}</code></p>
   </button>

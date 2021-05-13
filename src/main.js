@@ -1,10 +1,10 @@
 // import ProcrastinationWarning from "./ProcrastinationWarning.svelte";
 import LearningContent from "./LearningContent.svelte";
 
-function removeInfowarning() {
-  // will be replaced
-}
-let timer;
+// function removeInfowarning() {
+//   // will be replaced
+// }
+// let timer;
 
 // function resolve(arg) {
 //   console.log(timer.time);
@@ -41,6 +41,12 @@ let timer;
 //     timer.slowed = false;
 //   },
 // };
+// let url
+// let resolve
+// const procrastinationWarning = new ProcrastinationWarning({
+//   target: document.body,
+//   props: { removeInfowarning, timer, resolve, url },
+// });
 
 // let resolve
 // const procrastinationWarning = new ProcrastinationWarning({
