@@ -67,7 +67,7 @@
     justify-items: center !important;
     align-items: center !important;
     border-radius: 15px !important;
-    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3) !important;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3) !important;
   }
 
   #aiki-img {

@@ -12,7 +12,7 @@
     rotate: 0,
     transformOrigin: "50% 50%",
   };
-  
+
   export let gotoOrigin;
   export let continueVisible;
   export let canContinue;
@@ -29,7 +29,7 @@
 
 <div
   bind:this={target}
-  class="aiki-overlay"
+  id="aiki-overlay"
   transition:fade={{ delay: 0, duration: 200 }}
 >
   <div id="aiki-header">
@@ -40,9 +40,12 @@
       <div id="aiki-rightleft" />
     </div>
   </div>
-  <button id="aiki-button" disabled={!canContinue} on:click={() => gotoOrigin("injected")}>
-    <p id="aiki-p">Continue</p>
-    <!-- <p><code>{canContinue ? "Ready" : "Wait"}</code></p> -->
+  <button
+    id="aiki-button"
+    disabled={!canContinue}
+    on:click={() => gotoOrigin("injected")}
+  >
+    Continue
   </button>
 </div>
 <Moveable
@@ -68,7 +71,7 @@
 />
 
 <style>
-  .aiki-overlay {
+  #aiki-overlay {
     border-radius: 10px !important;
     flex-direction: column !important;
     top: 1em !important;
@@ -81,12 +84,13 @@
     display: flex !important;
     align-items: center !important;
     padding-top: 3px !important;
-    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3) !important;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3) !important;
     border: 1px solid #6c757d !important;
   }
 
   #aiki-h5 {
     color: #ffffff !important;
+    font-weight: 500 !important;
     font-size: 16px !important;
     font-family: "Roboto", sans-serif !important;
     margin: 0 auto !important;
@@ -94,8 +98,9 @@
   }
 
   #aiki-button {
-    width: 95% !important;
-    margin: 0 !important;
+    /* width: 95% !important; */
+    max-width: 95% !important;
+    margin: 5px 0px 0px 0px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -106,6 +111,7 @@
     border: 1px solid transparent !important;
     /* The below CSS is trying to emulate Bootstrap buttons */
     font-weight: 400 !important;
+    color: #ffffff !important;
     text-align: center !important;
     white-space: nowrap !important;
     vertical-align: middle !important;
@@ -129,13 +135,16 @@
   }
 
   #aiki-button:disabled {
+    opacity: 0.5;
     background-color: #6c757d !important;
     border-color: #6c757d !important;
+    cursor: not-allowed !important;
   }
 
   #aiki-button:disabled:hover {
     background-color: #6c757d !important;
     border-color: #6c757d !important;
+    cursor: not-allowed !important;
   }
 
   #aiki-header {
@@ -153,16 +162,6 @@
     background-color: #282c34 !important;
     border-radius: 5px !important;
     border: 2px solid #282c34 !important;
-  }
-
-  #aiki-p {
-    display: flex !important;
-    align-items: center !important;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
-    text-align: center !important;
-    margin: 0 !important;
-    color: #ffffff !important;
-    font-weight: 400 !important;
   }
 
   /* Rules for the close button */
@@ -204,5 +203,5 @@
   #aiki-close-container:hover #aiki-rightleft {
     transform: rotate(45deg) !important;
     background-color: #dc3545 !important;
-  }  
+  }
 </style>

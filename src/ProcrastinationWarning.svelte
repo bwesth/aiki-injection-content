@@ -60,7 +60,7 @@
   #aiki-content-wrapper {
     border-radius: 0px 0px 15px 15px !important;
     background-color: #ffffff !important;
-    box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.3) !important;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3) !important;
     width: 100% !important;
     display: flex !important;
     flex-direction: column !important;
@@ -133,8 +133,24 @@
     color: #ffffff !important;
     background-color: #007bff !important;
     border-color: #007bff !important;
-    border-radius: 5px !important;
     transition-duration: 0.4s !important;
+    /* Bootstrap CSS values */
+    font-weight: 400 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+    -ms-touch-action: manipulation !important;
+    touch-action: manipulation !important;
+    cursor: pointer !important;
+    background-image: none !important;
+    padding: 6px 12px !important;
+    font-size: 14px !important;
+    line-height: 1.42857143 !important;
+    border-radius: 4px !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
   }
 
   #aiki-button:hover {
