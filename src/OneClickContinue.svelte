@@ -5,12 +5,14 @@
   import { fade } from "svelte/transition";
   import Moveable from "svelte-moveable";
   import { onMount } from "svelte";
+
   let target;
   let frame = {
     translate: [0, 0],
     rotate: 0,
     transformOrigin: "50% 50%",
   };
+  
   export let gotoOrigin;
   export let continueVisible;
   export let canContinue;
@@ -39,8 +41,8 @@
     </div>
   </div>
   <button id="aiki-button" disabled={!canContinue} on:click={() => gotoOrigin("injected")}>
-    <p>Continue</p>
-    <p><code>{canContinue ? "Ready" : "Wait"}</code></p>
+    <p id="aiki-p">Continue</p>
+    <!-- <p><code>{canContinue ? "Ready" : "Wait"}</code></p> -->
   </button>
 </div>
 <Moveable
@@ -93,10 +95,7 @@
 
   #aiki-button {
     width: 95% !important;
-    /* height: 90% !important; */
     margin: 0 !important;
-    padding: 0 !important;
-    border-radius: 0 0 9px 9px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: center !important;
@@ -104,12 +103,24 @@
     z-index: 9001 !important;
     background-color: #28a745 !important;
     border-color: #28a745 !important;
-    border: 2px solid  !important;
-  }
-
-  code {
-    color: #ffffff !important;
-    margin: 0 !important;
+    border: 1px solid transparent !important;
+    /* The below CSS is trying to emulate Bootstrap buttons */
+    font-weight: 400 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    vertical-align: middle !important;
+    -ms-touch-action: manipulation !important;
+    touch-action: manipulation !important;
+    cursor: pointer !important;
+    background-image: none !important;
+    padding: 6px 12px !important;
+    font-size: 14px !important;
+    line-height: 1.42857143 !important;
+    border-radius: 4px !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
   }
 
   #aiki-button:hover {
@@ -144,10 +155,9 @@
     border: 2px solid #282c34 !important;
   }
 
-  p {
+  #aiki-p {
     display: flex !important;
     align-items: center !important;
-    /* height: 4vh !important; */
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
     text-align: center !important;
     margin: 0 !important;
@@ -194,5 +204,5 @@
   #aiki-close-container:hover #aiki-rightleft {
     transform: rotate(45deg) !important;
     background-color: #dc3545 !important;
-  }
+  }  
 </style>
