@@ -1,13 +1,10 @@
 <script>
   import TimeSelector from "./TimeSelector.svelte";
 
-  //Generates an array with values from 1->60
   let minutesArray = Array.from({ length: 60 }, (_, i) => i + 1);
   let secondsArray = [0, 15, 30, 45];
   let label = "Min/Sec";
 
-//   console.log("minutesarray", minutesArray);
-//   console.log("secondsarray", secondsArray);
 </script>
 
 <div class="main">

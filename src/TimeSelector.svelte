@@ -1,4 +1,7 @@
-<script>
+<!-- 
+  Test model of the TimeSelector component for the main app.
+ -->
+ <script>
   export let minutesArray;
   export let secondsArray;
   export let label;
@@ -7,7 +10,6 @@
 <div class="wrapper">
   <select class="custom-select custom-select-sm inline">
     <optgroup label="Minutes">
-      <!-- <option selected disabled>Minutes</option> -->
       {#each minutesArray as minute}
         <option value={minute}>{minute}</option>
       {/each}
@@ -16,7 +18,6 @@
 
   <select class="custom-select custom-select-sm inline">
     <optgroup label="Seconds">
-      <!-- <option selected disabled>Seconds</option> -->
       {#each secondsArray as second}
         <option value={second}>{second}</option>
       {/each}

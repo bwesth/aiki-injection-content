@@ -9,16 +9,13 @@
   let render = true;
   const ref = setTimeout(() => (render = false), 2000);
 
-  //Small helper function that improves Math.floor functionality.
   const random = (min, max) => Math.floor(Math.random() * (max - min)) + min;
 
-  //Picks a random quote for us.
   function randomQuote() {
     let index = random(0, 6);
     return quotes[index];
   }
 
-  //Some nice little quotes to add to our overlay!
   const quotes = [
     "Let's do something productive! 😊",
     "Time to learn some Python! 🖥️",
@@ -29,7 +26,6 @@
     "Python won't teach itself! 👩‍🏫",
   ];
 
-  //Picks a random quote whenever the overlay is loaded.
   let quote = randomQuote();
 </script>
 

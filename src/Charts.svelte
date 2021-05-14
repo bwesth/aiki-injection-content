@@ -1,9 +1,11 @@
+<!-- 
+  Test model of the Charts component for the main app.
+ -->
 <script>
   import FusionCharts from "fusioncharts";
   import Charts from "fusioncharts/fusioncharts.charts";
   import SvelteFC, { fcRoot } from 'svelte-fusioncharts';
 
-  // Add dependencies
   fcRoot(FusionCharts, Charts);
 
   let dataSource = {

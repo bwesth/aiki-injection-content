@@ -1,6 +1,7 @@
 <!-- 
-
--->
+  Overlay that appears during a learning session to display a continue button.
+  Uses svelte-moveable library: https://www.npmjs.com/package/svelte-moveable
+ -->
 <script>
   import { fade } from "svelte/transition";
   import Moveable from "svelte-moveable";
