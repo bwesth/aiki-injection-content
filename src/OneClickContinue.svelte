@@ -16,8 +16,11 @@
 
   export let gotoOrigin;
   export let continueVisible;
-  export let canContinue;
+  export let getReady;
   export let endInjection;
+  let isReady = getReady()
+
+  setInterval(() => isReady = getReady(), 1000)
 
   function close() {
     continueVisible = false;
@@ -43,7 +46,7 @@
   </div>
   <button
     id="aiki-button"
-    disabled={!canContinue}
+    disabled={!isReady}
     on:click={() => gotoOrigin("injected")}
   >
     Continue

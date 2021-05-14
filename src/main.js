@@ -76,13 +76,16 @@ function endInjection(){
   console.log("endInjection")
 }
 
-let countdown = 3000
 let welcomeVisible = true
+
+function getReady(){
+  return true
+}
 
 
 const learningContent = new LearningContent({
   target: document.body,
-  props: { countdown, welcomeVisible, gotoOrigin, endInjection },
+  props: { welcomeVisible, gotoOrigin, endInjection, getReady },
 });
 
 export default learningContent;
