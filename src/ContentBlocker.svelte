@@ -12,7 +12,7 @@
       <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo" />
       <h5 id="aiki-h5">Aiki<sup>3</sup></h5>
     </div>
-    <p id="aiki-p">You can look at twitter when you're done learning</p>
+    <p id="aiki-p">You can procrastinate when you're done learning</p>
     <button id="aiki-button" on:click={gotoOriginTab}> Keep Learning </button>
   </div>
 </div>
@@ -47,7 +47,7 @@
     flex-direction: column;
     color: #ffffff;
     background-color: #323f4b !important;
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px;
   }
 
