@@ -18,9 +18,9 @@
   export let continueVisible;
   export let getReady;
   export let endInjection;
-  let isReady = getReady()
+  let isReady = getReady();
 
-  setInterval(() => isReady = getReady(), 1000)
+  setInterval(() => (isReady = getReady()), 1000);
 
   function close() {
     continueVisible = false;
@@ -49,7 +49,7 @@
     disabled={!isReady}
     on:click={() => gotoOrigin("injected")}
   >
-    Continue
+    Continue<br />Procrastinating
   </button>
 </div>
 <Moveable
@@ -80,7 +80,7 @@
     flex-direction: column !important;
     top: 1em !important;
     right: 1em !important;
-    height: 80px !important;
+    height: 95px !important;
     width: 120px !important;
     background-color: #282c34 !important;
     position: fixed !important;
@@ -103,7 +103,8 @@
 
   #aiki-button {
     /* width: 95% !important; */
-    max-width: 95% !important;
+    white-space: normal !important;
+    max-width: 90% !important;
     margin: 5px 0px 0px 0px !important;
     display: flex !important;
     flex-direction: column !important;
