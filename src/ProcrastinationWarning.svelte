@@ -26,8 +26,6 @@
       <button
         id="aiki-button"
         on:click={removeInfowarning}
-        on:mouseover={timer.slow}
-        on:mouseout={timer.hasten}
       >
         <p id="aiki-p">Snooze</p>
         <small id="aiki-small">(+1 minute)</small>
