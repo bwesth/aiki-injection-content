@@ -1,81 +1,81 @@
 <!-- 
   Overlay that appears on redirection to a learning site.
  -->
- <script>
-    import { fade } from "svelte/transition";
-    export let gotoOriginTab;
-  </script>
-  
-    <div
-      id="aiki-overlay"
-      transition:fade={{ delay: 0, duration: 200 }}>
-      <div id="aiki-wrapper">
-        
-        <div id="aiki-header">
-          <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo" />
-          <h5 id="aiki-h5">Aiki<sup>3</sup></h5>
-        </div>
-        <button
-          id="aiki-button"
-          on:click={gotoOriginTab}
-        >
-          Continue
-        </button>
-      </div>
-    </div>
-  
-  <style>
-    #aiki-overlay {
-      top: 0 !important;
-      left: 0 !important;
-      height: 100% !important;
-      width: 100% !important;
-      background-color: rgb(128, 128, 128) !important;
-      position: fixed !important;
-      z-index: 9001 !important;
-    }
-  
-    #aiki-wrapper {
-      display: flex !important;
-      flex-direction: row !important;
-      width: fit-content !important;
-      position: fixed !important;
-      top: 40% !important;
-      left: calc(50% - 150px) !important;
-      justify-items: center !important;
-      align-items: center !important;
-      border-radius: 15px !important;
-      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3) !important;
-    }
-  
-    #aiki-img {
-      height: 4vh !important;
-      padding: 5px !important;
-      background-color: #282c34 !important;
-      border-radius: 15px 0px 0px 15px !important;
-      border: 2px solid #282c34 !important;
-    }
-  
-    #aiki-p {
-      display: flex !important;
-      align-items: center !important;
-      height: 4vh !important;
-      line-height: 4vh !important;
-      padding: 5px !important;
-      background-color: #ffffff !important;
-      border-radius: 0px 15px 15px 0px !important;
-      border-left-style: none !important;
-      border: 2px solid #aaaaaa !important;
-      font-size: 16px !important;
-      font-family: "Lato", sans-serif !important;
-      text-align: center !important;
-      margin: 0 !important;
-      color: #444444 !important;
-    }
+<script>
+  import { fade } from "svelte/transition";
+  export let gotoOriginTab;
+</script>
 
-    #aiki-button {
+<div id="aiki-overlay" transition:fade={{ delay: 0, duration: 200 }}>
+  <div id="aiki-textbox">
+    <div id="aiki-header">
+      <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo" />
+      <h5 id="aiki-h5">Aiki<sup>3</sup></h5>
+    </div>
+    <p id="aiki-p">You can look at twitter when you're done learning</p>
+    <button id="aiki-button" on:click={gotoOriginTab}> Keep Learning </button>
+  </div>
+</div>
+<!-- HELP MEESEEKS -->
+<style>
+  /* * {
+    border: 1px solid red;
+  } */
+
+  #aiki-p {
+    margin: 5px 0px !important;
+    font-family: "Lato", sans-serif;
+  }
+
+  #aiki-overlay {
+    top: 0 !important;
+    left: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    background-color: #1f2933 !important;
+    position: fixed !important;
+    z-index: 9001 !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #aiki-textbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #ffffff;
+    background-color: #323f4b !important;
+    padding: 10px;
+    border-radius: 10px;
+  }
+
+  #aiki-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    font-family: "Roboto", sans-serif;
+  }
+
+  #aiki-h5 {
+    margin: 0;
+    display: inline;
+  }
+
+  #aiki-img {
+    height: 20px;
+    width: 20px;
+    display: inline;
+    margin-right: 5px;
+  }
+
+  #aiki-button {
     /* width: 95% !important; */
-    max-width: 95% !important;
+    white-space: normal !important;
+    max-width: 90% !important;
     margin: 5px 0px 0px 0px !important;
     display: flex !important;
     flex-direction: column !important;
@@ -105,5 +105,8 @@
     user-select: none !important;
   }
 
-  </style>
-  
+  #aiki-button:hover {
+    background-color: #208934 !important;
+    border-color: #208934 !important;
+  }
+</style>
