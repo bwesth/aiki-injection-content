@@ -1,5 +1,6 @@
+/* PROC WARNING INJECTION STUFF!!!! */
+
 // import ProcrastinationWarning from "./ProcrastinationWarning.svelte";
-import LearningContent from "./LearningContent.svelte";
 
 // function removeInfowarning() {
 //   // will be replaced
@@ -69,23 +70,45 @@ import LearningContent from "./LearningContent.svelte";
 //  element.remove();
 // }
 
-function gotoOrigin(){
-  console.log("gotoOrigin")
+
+/* LEARNING INJECTION STUFF!!!! */
+
+// import LearningContent from "./LearningContent.svelte";
+
+
+// function gotoOrigin(){
+//   console.log("gotoOrigin")
+// }
+// function endInjection(){
+//   console.log("endInjection")
+// }
+
+// let welcomeVisible = true
+
+// function getReady(){
+//   return true
+// }
+
+
+// const learningContent = new LearningContent({
+//   target: document.body,
+//   props: { welcomeVisible, gotoOrigin, endInjection, getReady },
+// });
+
+// export default learningContent;
+
+
+/* CONTENT BLOCKER STUFF!!!! */
+
+import ContentBlocker from "./ContentBlocker.svelte";
+
+function gotoOriginTab(){
+  console.log("Change to origin tab")
 }
-function endInjection(){
-  console.log("endInjection")
-}
 
-let welcomeVisible = true
-
-function getReady(){
-  return true
-}
-
-
-const learningContent = new LearningContent({
+const contentBlocker = new ContentBlocker({
   target: document.body,
-  props: { welcomeVisible, gotoOrigin, endInjection, getReady },
+  props: { gotoOriginTab },
 });
 
-export default learningContent;
+export default contentBlocker;
