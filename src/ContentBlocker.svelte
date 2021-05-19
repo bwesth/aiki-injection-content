@@ -6,11 +6,9 @@
     export let gotoOriginTab;
   </script>
   
-
     <div
       id="aiki-overlay"
-      transition:fade={{ delay: 0, duration: 200 }}
-    >
+      transition:fade={{ delay: 0, duration: 200 }}>
       <div id="aiki-wrapper">
         
         <div id="aiki-header">
@@ -25,7 +23,6 @@
         </button>
       </div>
     </div>
-
   
   <style>
     #aiki-overlay {
