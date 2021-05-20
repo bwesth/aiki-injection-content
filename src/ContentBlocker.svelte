@@ -6,14 +6,14 @@
   export let gotoOriginTab;
 </script>
 
-<div id="aiki-overlay" transition:fade={{ delay: 0, duration: 200 }}>
-  <div id="aiki-textbox">
-    <div id="aiki-header">
-      <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo" />
-      <h5 id="aiki-h5">Aiki<sup>3</sup></h5>
+<div class="aiki-overlay" transition:fade={{ delay: 0, duration: 200 }}>
+  <div class="aiki-textbox">
+    <div class="aiki-header">
+      <img class="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo" />
+      <h5 class="aiki-h5">Aiki<sup>3</sup></h5>
     </div>
-    <p id="aiki-p">You can procrastinate when you're done learning</p>
-    <button id="aiki-button" on:click={gotoOriginTab}> Keep Learning </button>
+    <p class="aiki-p">You can procrastinate when you're done learning</p>
+    <button class="aiki-button" on:click={gotoOriginTab}> Keep Learning </button>
   </div>
 </div>
 <!-- HELP MEESEEKS -->
@@ -22,12 +22,12 @@
     border: 1px solid red;
   } */
 
-  #aiki-p {
+  .aiki-p {
     margin: 5px 0px !important;
     font-family: "Lato", sans-serif;
   }
 
-  #aiki-overlay {
+  .aiki-overlay {
     top: 0 !important;
     left: 0 !important;
     height: 100% !important;
@@ -40,7 +40,7 @@
     align-items: center;
   }
 
-  #aiki-textbox {
+  .aiki-textbox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,7 @@
     border-radius: 10px;
   }
 
-  #aiki-header {
+  .aiki-header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,19 +60,19 @@
     font-family: "Roboto", sans-serif;
   }
 
-  #aiki-h5 {
+  .aiki-h5 {
     margin: 0;
     display: inline;
   }
 
-  #aiki-img {
+  .aiki-img {
     height: 20px;
     width: 20px;
     display: inline;
     margin-right: 5px;
   }
 
-  #aiki-button {
+  .aiki-button {
     /* width: 95% !important; */
     white-space: normal !important;
     max-width: 90% !important;
@@ -105,7 +105,7 @@
     user-select: none !important;
   }
 
-  #aiki-button:hover {
+  .aiki-button:hover {
     background-color: #208934 !important;
     border-color: #208934 !important;
   }

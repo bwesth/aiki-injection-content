@@ -33,19 +33,19 @@
 
 <div
   bind:this={target}
-  id="aiki-overlay"
+  class="aiki-overlay"
   transition:fade={{ delay: 0, duration: 200 }}
 >
-  <div id="aiki-header">
-    <img id="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo" />
-    <h5 id="aiki-h5">Aiki<sup>3</sup></h5>
-    <div id="aiki-close-container" on:click={close}>
-      <div id="aiki-leftright" />
-      <div id="aiki-rightleft" />
+  <div class="aiki-header">
+    <img class="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo" />
+    <h5 class="aiki-h5">Aiki<sup>3</sup></h5>
+    <div class="aiki-close-container" on:click={close}>
+      <div class="aiki-leftright" />
+      <div class="aiki-rightleft" />
     </div>
   </div>
   <button
-    id="aiki-button"
+    class="aiki-button"
     disabled={!isReady}
     on:click={() => gotoOrigin("injected")}
   >
@@ -75,7 +75,7 @@
 />
 
 <style>
-  #aiki-overlay {
+  .aiki-overlay {
     border-radius: 10px !important;
     flex-direction: column !important;
     top: 1em !important;
@@ -92,7 +92,7 @@
     border: 1px solid #6c757d !important;
   }
 
-  #aiki-h5 {
+  .aiki-h5 {
     color: #ffffff !important;
     font-weight: 500 !important;
     font-size: 16px !important;
@@ -101,7 +101,7 @@
     cursor: move !important;
   }
 
-  #aiki-button {
+  .aiki-button {
     /* width: 95% !important; */
     white-space: normal !important;
     max-width: 90% !important;
@@ -134,25 +134,25 @@
     user-select: none !important;
   }
 
-  #aiki-button:hover {
+  .aiki-button:hover {
     background-color: #208934 !important;
     border-color: #208934 !important;
   }
 
-  #aiki-button:disabled {
+  .aiki-button:disabled {
     opacity: 0.5;
     background-color: #6c757d !important;
     border-color: #6c757d !important;
     cursor: not-allowed !important;
   }
 
-  #aiki-button:disabled:hover {
+  .aiki-button:disabled:hover {
     background-color: #6c757d !important;
     border-color: #6c757d !important;
     cursor: not-allowed !important;
   }
 
-  #aiki-header {
+  .aiki-header {
     height: 25px;
     display: flex !important;
     width: 100% !important;
@@ -160,7 +160,7 @@
     align-items: center !important;
   }
 
-  #aiki-img {
+  .aiki-img {
     margin-left: 3px !important;
     width: 16px !important;
     height: 16px !important;
@@ -170,7 +170,7 @@
   }
 
   /* Rules for the close button */
-  #aiki-close-container {
+  .aiki-close-container {
     width: 20px !important;
     height: 20px !important;
     position: relative !important;
@@ -179,7 +179,7 @@
     margin-right: 3px !important;
   }
 
-  #aiki-leftright {
+  .aiki-leftright {
     margin-top: 8px !important;
     height: 4px !important;
     width: 16px !important;
@@ -190,7 +190,7 @@
     transition: all 0.3s ease-in !important;
   }
 
-  #aiki-rightleft {
+  .aiki-rightleft {
     margin-top: 8px !important;
     height: 4px !important;
     width: 16px !important;
@@ -201,11 +201,11 @@
     transition: all 0.3s ease-in !important;
   }
 
-  #aiki-close-container:hover #aiki-leftright {
+  .aiki-close-container:hover #aiki-leftright {
     transform: rotate(-45deg) !important;
     background-color: #dc3545 !important;
   }
-  #aiki-close-container:hover #aiki-rightleft {
+  .aiki-close-container:hover #aiki-rightleft {
     transform: rotate(45deg) !important;
     background-color: #dc3545 !important;
   }
