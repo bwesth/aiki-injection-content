@@ -201,11 +201,11 @@
     transition: all 0.3s ease-in !important;
   }
 
-  .aiki-close-container:hover #aiki-leftright {
+  .aiki-close-container:hover .aiki-leftright {
     transform: rotate(-45deg) !important;
     background-color: #dc3545 !important;
   }
-  .aiki-close-container:hover #aiki-rightleft {
+  .aiki-close-container:hover .aiki-rightleft {
     transform: rotate(45deg) !important;
     background-color: #dc3545 !important;
   }
