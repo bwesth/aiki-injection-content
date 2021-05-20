@@ -13,18 +13,20 @@
       <h5 class="aiki-h5">Aiki<sup>3</sup></h5>
     </div>
     <p class="aiki-p">You can procrastinate when you're done learning</p>
-    <button class="aiki-button" on:click={gotoOriginTab}> Keep Learning </button>
+    <button class="aiki-button" on:click={gotoOriginTab}>
+      Keep Learning
+    </button>
   </div>
 </div>
-<!-- HELP MEESEEKS -->
-<style>
-  /* * {
-    border: 1px solid red;
-  } */
 
+<style>
   .aiki-p {
     margin: 5px 0px !important;
-    font-family: "Lato", sans-serif;
+    font-weight: 400 !important;
+    font-family: "Lato", sans-serif !important;
+    font-size: 14px !important;
+    color: #ffffff !important;
+    background-color: #323f4b !important;
   }
 
   .aiki-overlay {
@@ -35,34 +37,43 @@
     background-color: #1f2933 !important;
     position: fixed !important;
     z-index: 9001 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
   }
 
   .aiki-textbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    color: #ffffff;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    color: #ffffff !important;
     background-color: #323f4b !important;
-    padding: 12px;
-    border-radius: 10px;
+    padding: 12px !important;
+    border-radius: 10px !important;
   }
 
   .aiki-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: 100%;
-    font-family: "Roboto", sans-serif;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+    font-weight: 400 !important;
+    font-family: "Roboto", sans-serif !important;
+    font-size: 14px !important;
+    color: #ffffff !important;
+    background-color: #323f4b !important;
   }
 
   .aiki-h5 {
-    margin: 0;
-    display: inline;
+    font-size: 16px !important;
+    font-weight: bolder !important;
+    font-family: "Roboto", sans-serif !important;
+    color: #ffffff !important;
+    margin: 0 !important;
+    display: inline !important;
+    background-color: #323f4b !important;
   }
 
   .aiki-img {
@@ -70,6 +81,7 @@
     width: 20px;
     display: inline;
     margin-right: 5px;
+    background-color: #323f4b !important;
   }
 
   .aiki-button {
@@ -87,6 +99,8 @@
     border: 1px solid transparent !important;
     /* The below CSS is trying to emulate Bootstrap buttons */
     font-weight: 400 !important;
+    font-family: "Roboto", sans-serif !important;
+    font-size: 14px !important;
     color: #ffffff !important;
     text-align: center !important;
     white-space: nowrap !important;
