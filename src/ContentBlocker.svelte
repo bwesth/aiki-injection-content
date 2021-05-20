@@ -64,7 +64,7 @@ align-items: center !important;"
       display: inline !important;
       background-color: #323f4b !important;"
       >
-        Aiki<sup>3</sup>
+        Aiki<sup style="vertical-align:super; font-size: smaller;">3</sup>
       </h5>
     </div>
     <p

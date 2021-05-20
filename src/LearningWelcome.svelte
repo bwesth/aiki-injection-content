@@ -31,19 +31,65 @@
 
 {#if render}
   <div
-    on:click={() => welcomeVisible = false}
+    on:click={() => (welcomeVisible = false)}
     class="aiki-overlay"
+    style="    top: 0 !important;
+    left: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    background-color: rgba(128, 128, 128, 0.3) !important;
+    position: fixed !important;
+    z-index: 9001 !important;"
     transition:fade={{ delay: 0, duration: 200 }}
   >
-    <div class="aiki-wrapper">
-      <img class="aiki-img" src="images/AikiLogo.png" alt="Aiki Logo" />
-      <p class="aiki-p">{quote}</p>
+    <div
+      class="aiki-wrapper"
+      style="display: flex !important;
+    flex-direction: row !important;
+    width: fit-content !important;
+    position: fixed !important;
+    top: 40% !important;
+    left: calc(50% - 150px) !important;
+    justify-items: center !important;
+    align-items: center !important;
+    border-radius: 15px !important;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3) !important;"
+    >
+      <img
+        class="aiki-img"
+        src="images/AikiLogo.png"
+        alt="Aiki Logo"
+        style="    height: 4vh !important;
+      padding: 5px !important;
+      background-color: #282c34 !important;
+      border-radius: 15px 0px 0px 15px !important;
+      border: 2px solid #282c34 !important;"
+      />
+      <p
+        class="aiki-p"
+        style="    display: flex !important;
+      align-items: center !important;
+      height: 4vh !important;
+      line-height: 4vh !important;
+      padding: 5px !important;
+      background-color: #ffffff !important;
+      border-radius: 0px 15px 15px 0px !important;
+      border-left-style: none !important;
+      border: 2px solid #aaaaaa !important;
+      font-size: 16px !important;
+      font-family: 'Lato', sans-serif !important;
+      text-align: center !important;
+      margin: 0 !important;
+      color: #444444 !important;"
+      >
+        {quote}
+      </p>
     </div>
   </div>
 {/if}
 
 <style>
-  .aiki-overlay {
+  /* .aiki-overlay {
     top: 0 !important;
     left: 0 !important;
     height: 100% !important;
@@ -89,5 +135,5 @@
     text-align: center !important;
     margin: 0 !important;
     color: #444444 !important;
-  }
+  } */
 </style>
