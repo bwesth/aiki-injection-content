@@ -78,7 +78,8 @@
     margin: 0 auto !important;
     cursor: move !important;"
     >
-      Aiki<sup style="vertical-align:super; font-size: smaller;">3</sup>
+      Aiki
+      <!-- <sup style="vertical-align:super; font-size: smaller;">3</sup> -->
     </h5>
     <div
       class="aiki-close-container"
